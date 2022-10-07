@@ -1,6 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
-
+import Employees from "../models/users.js";
 
 var app = express();
 
@@ -12,7 +12,25 @@ app.post("/", (req,res) => {
 
     console.log("we in backend on login");
     console.log(data);
-    res.send("data recieved");
+    Employees.findOne({email : data.email}, function(err, result){
+        if(err){
+            console.log("we got a error");
+            console.log(err);
+        }
+        else{
+            if(result == null){
+                res.send("NO USER");
+            }
+            else if(data.password != result.password){
+                res.send("INVALID LOGIN");
+            }
+            else res.send(result);
+
+        }
+    })
+
+
+
 
 })
 
