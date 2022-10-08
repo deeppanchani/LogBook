@@ -26,9 +26,6 @@ function Login(){
             }
 
         }
-        
-
-
     }
     return (
         <div>
@@ -44,13 +41,9 @@ function Login(){
                 value = {password}
                 onChange = {(e) => setPassword(e.target.value)}
                  />
-
                  <button onClick={sendData}> Submit Form </button>
             </form>
-
-
         </div>
     )
 }
-
 export default Login;
