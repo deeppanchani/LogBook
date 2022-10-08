@@ -31,6 +31,7 @@ function AddEmployee(){
     return (
       <div>
         <form action="">
+          <h3 className="addNew">Add New Emoployee</h3>
           <label htmlFor="name">Name</label>
           <br />
           <input
