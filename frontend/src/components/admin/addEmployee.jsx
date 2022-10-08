@@ -20,21 +20,34 @@ function AddEmployee(){
     }
 
     return (
-        <div>
-            <form action="">
-                <label htmlFor="">Name</label>
-                <input type="text" />
-                <label htmlFor=""></label>
-                <input type="text" />
-                <label htmlFor=""></label>
-                <input type="text" />
-                <label htmlFor=""></label>
-                <input type="text" />
-
-                <button onClick = {sendEmployeeData}>Add</button>
-            </form>
-        </div>
-    )
+      <div>
+        <form action="">
+          <label htmlFor="name">Name</label>
+          <br />
+          <input type="text" id = "name"/>
+          <br />
+          <label htmlFor="email">Email</label>
+          <br />
+          <input type="email" id = "email"/>
+          <br />
+          <label htmlFor="contact">Contact Number</label>
+          <br />
+          <input type="tel" id = "contact"/>
+          <br />
+          <label htmlFor="department" >Department</label>
+          <br />
+          <input type="text" id = "department"/>
+          <br />
+          <label htmlFor="date">Joining Date</label>
+          <br />
+          <input type="date" />
+          <br />
+          <label htmlFor="password">Password</label>
+          <br />
+          <input type="text" id = "password"/>
+        </form>
+      </div>
+    );
 }
 
 export default AddEmployee;
