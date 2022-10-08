@@ -28,7 +28,7 @@ function AdminDashBoard(){
 
     const isAdmin = useSelector((state) => state.isAdmin);
     // console.log(isAdmin);
-    if(isAdmin == false){
+    if(isAdmin === false){
         return (
             <div>
                 Please Login with Admin id

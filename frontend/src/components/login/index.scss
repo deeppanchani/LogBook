@@ -1,22 +1,25 @@
+$lightBlack : #1B1C21;
+$darkBlack : #141518;
+$white : #FDFCFF;
+$primaryPurple : #6100E0;
+$secondaryGreen : #29BF12;
+$secondaryRed : #F21B3F;
+$secondaryBlue : #0361FF;
+$grey: #AEAEAE;
+
 .form-page{
     display: 100%;
-    height: 780px;
     display: grid;
-    margin-left: 100px;
-    margin-right: 100px;
-
     grid-template-columns: 1fr 1fr 1fr;
 
     .form{
         width: 600px;
         display: inline-block;
-        wrap: flex-wrap;
-        margin-top: 70px;
-        border: 1px solid;
+        margin-top: 60px;
+        border: 1px solid $lightBlack;
         border-radius: 20px;
-        height: 507px;
+        height: 430px;
         grid-column: 2/3;
-
         label::after {
             content: "*";
             width: 1.5em;
@@ -24,35 +27,41 @@
             color: red;
         }
 
-        .welcome{
-        display: inline-block;
-          margin-top: 50px;
-          margin-left: 173px;
-          margin-bottom: 0;
-          padding: 0;
+        h3{
+            display: inline-block;
+            margin-top: 30px;
+            margin-left: 173px;
+            margin-bottom: 0;
+            padding: 0;
         }
 
         .emailLabel{
             margin-left: 65px;
             display: inline-block;
-            margin-top: 30px;
+            margin-top: 25px;
             margin-bottom: 0;
             padding: 0;
+            
         }
 
         .emailInput{
             width: 500px;
-            height: 60px;
+            height: 50px;
             margin-left: 50px;
             display: inline-block;
             margin-top: 15px;
             margin-bottom: 0;
             padding: 0;
+            padding-left: 10px;
+            border-radius: 10px;
+            font-weight: 400;
+            font-size: 22.5px;
+            line-height: 27px;
         }
 
         .password-label{
             display: inline-block;
-            margin-top: 30px;
+            margin-top: 20px;
             margin-left: 65px;
             margin-bottom: 0;
             padding: 0;
@@ -60,23 +69,32 @@
         
         .password-input{
             width: 500px;
-            height: 60px;
+            height: 50px;
             margin-left: 50px;
             display: inline-block;
             margin-top: 15px;
             margin-bottom: 0;
             padding: 0;
+            padding-left: 10px;
+            border-radius: 10px;
+            font-weight: 400;
+            font-size: 22.5px;
+            line-height: 27px;
         }
 
         .submitButton{
             display: inline-block;
             width: 500px;
-            margin-top: 40px;
+            margin-top: 30px;
             margin-left: 50px;
-            height: 60px;
+            height: 50px;
+            border: 0px;
             border-radius: 10px;
             margin-bottom: 0;
             padding: 0;
+            color: $white;
+            background-color: $secondaryBlue;
+            cursor: pointer;
         }
         
     }

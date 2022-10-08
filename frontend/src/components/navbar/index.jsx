@@ -15,7 +15,7 @@ function Navbar(){
           </div>
         </div>
         <div className="display-mode">  
-          <MdDarkMode className="mode-button" size={35.75}></MdDarkMode>
+          <MdDarkMode className="mode-button" size={39.75}></MdDarkMode>
         </div>
       </nav>
     );
