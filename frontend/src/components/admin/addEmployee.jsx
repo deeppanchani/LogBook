@@ -11,6 +11,8 @@ function AddEmployee(){
     var [joining, setJoining] = React.useState(d.getTime());
     var [password, setPassword] = React.useState("");
 
+    
+
     const sendEmployeeData = async (event) => {
         event.preventDefault();
         
