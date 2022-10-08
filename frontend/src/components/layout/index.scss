@@ -1,5 +1,67 @@
-div{
-    padding : 0;
-    margin: 0;
-    height: 100%;
+*{
+    font-family: 'Inter';
+}
+
+
+h1{
+    font-weight: 700;
+    font-size: 5gir4.93px;
+    line-height: 66px;
+    text-transform: capitalize;
+}
+
+
+h2{
+    font-weight: 700;
+    font-size: 43.95px;
+    line-height: 53px;
+}
+
+
+h3{
+    font-weight: 700;
+    font-size: 35.16px;
+    line-height: 43px;
+}
+
+
+h4{
+    font-weight: 700;
+    font-size: 28.13px;
+    line-height: 34px;
+}
+
+
+.s1{
+    font-weight: 600;
+    font-size: 28.13px;
+    line-height: 34px;
+}
+
+
+.s2{
+    font-weight: 600;
+    font-size: 22.5px;
+    line-height: 27px;
+}
+
+
+.b1{
+    font-weight: 400;
+    font-size: 28.13px;
+    line-height: 34px;
+}
+
+
+.b2{
+    font-weight: 400;
+    font-size: 22.5px;
+    line-height: 27px;
+}
+
+
+button{
+    font-weight: 400;
+    font-size: 22.5px;
+    line-height: 27px;
 }
