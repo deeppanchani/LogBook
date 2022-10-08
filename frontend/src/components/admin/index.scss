@@ -1,0 +1,22 @@
+.admin{
+    .top-part{
+
+        display: grid;
+        grid-template-columns:  3fr 5fr 1fr;
+        h3{
+            grid-column: 1/2;
+            margin-top: 54px;
+            margin-left: 113px;
+        }
+
+        button{
+            
+            grid-column: 3/4;
+            width: 100px;
+            height: 47px;
+        }
+
+
+    }
+    
+}

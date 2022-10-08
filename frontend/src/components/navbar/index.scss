@@ -1,11 +1,12 @@
 .nav{
     margin-left: 100px;
     margin-right: 100px;
+    height: 90px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     
     .logos{
-
+        height: 90px;
         grid-column:  2/3;
         display: flex;
         justify-content: space-around;
@@ -13,10 +14,16 @@
         align-items: center;
 
         .singleElement{
+            height: 90px;
             display: flex;
-            
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
             h2{
-                padding-left: 10px;
+                // padding-bottom: 40px;
+                // margin-bottom: 10px;
+                // padding-left: 10px;
+                height: 50px;
             }
         }
     }
