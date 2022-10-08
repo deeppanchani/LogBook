@@ -15,13 +15,13 @@ function Login(){
         var data = {email, password};
         var response = await axios.post("/login", data);
         console.log(response);
-        if(response.data == 'NO USER' || response.data == 'INVALID LOGIN'){
+        if(response.data === 'NO USER' || response.data === 'INVALID LOGIN'){
             alert("Wrong Credentials");
         }
         else{
             dispatch(LogInAction());
             dispatch(SetEmailAction(email));
-            if(response.data.admin == true){
+            if(response.data.admin === true){
                 dispatch(SetAdminAction());
             }else{
                 dispatch(RemoveAdminAction())
