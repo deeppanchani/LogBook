@@ -1,0 +1,70 @@
+.form-page{
+    display: 100%;
+    height: 780px;
+    display: grid;
+    margin-left: 100px;
+    margin-right: 100px;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .form{
+        width: 600px;
+        display: inline-block;
+        wrap: flex-wrap;
+        margin-top: 158px;
+        border: 1px solid;
+        border-radius: 20px;
+        height: 507px;
+        grid-column: 2/3;
+
+        label::after {
+            content: "*";
+            width: 1.5em;
+            margin-right: 1.5em;
+            color: red;
+        }
+
+        .welcome{
+        display: inline-block;
+          margin-top: 50px;
+          margin-left: 173px;
+        }
+
+        .emailLabel{
+            margin-left: 65px;
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        .emailInput{
+            width: 500px;
+            height: 60px;
+            margin-left: 50px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .password-label{
+            display: inline-block;
+            margin-top: 30px;
+            margin-left: 65px;
+        }
+        
+        .password-input{
+            width: 500px;
+            height: 60px;
+            margin-left: 50px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .submitButton{
+            display: inline-block;
+            margin-top: 40px;
+            margin-left: 50px;
+        }
+        
+    }
+
+    
+}

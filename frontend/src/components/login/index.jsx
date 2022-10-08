@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 
+import "./index.scss"
+
 import {useDispatch} from "react-redux";
 import {LogInAction, SetEmailAction, SetAdminAction, RemoveAdminAction} from "../actions.js"
 
@@ -28,22 +30,36 @@ function Login(){
         }
     }
     return (
-        <div>
-            <form action="">
-                <input type="email"
-                placeholder="Email" 
-                value = {email}
-                onChange = {(e) => setEmail(e.target.value)}
-                />
-                <br />
-                <input type="password"
-                placeholder=" password"
-                value = {password}
-                onChange = {(e) => setPassword(e.target.value)}
-                 />
-                 <button onClick={sendData}> Submit Form </button>
-            </form>
-        </div>
-    )
+      <div className="form-page">
+        <form action="" className="form">
+          <h3 className="welcome">Welcome Back</h3>
+          <br />
+          <label htmlFor="email" className = "emailLabel">Email</label>
+          <br />
+          <input
+            type="email"
+            id="email"
+            className = "emailInput"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <br />
+          <label htmlFor="password" className="password-label">Password</label>
+          <br />
+          <input
+          required = {true}
+            id = "password"
+            type="password"
+            placeholder=" password"
+            value={password}
+            className = "password-input"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <br />
+          <button onClick={sendData} className = "submitButton"> Submit Form </button>
+        </form>
+      </div>
+    );
 }
 export default Login;
