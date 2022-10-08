@@ -15,7 +15,7 @@ function EmployeeDashboard(){
             <div className="top-employee">
                 <h3>Today's Tasks</h3>
                 <button className="edit-button" > Edit Profile</button>
-                <button className="add-button" >+ Add Task</button>
+                <button className="add-button" onClick={handleEdit} >+ Add Task</button>
             </div>
             {addTaskShow && <AddTaskButton />}
 
