@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 
+import "./addEmployee.scss";
 
 function AddEmployee(){
     var d = new Date();
