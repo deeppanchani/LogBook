@@ -11,7 +11,7 @@
         width: 600px;
         display: inline-block;
         wrap: flex-wrap;
-        margin-top: 158px;
+        margin-top: 70px;
         border: 1px solid;
         border-radius: 20px;
         height: 507px;
@@ -28,12 +28,16 @@
         display: inline-block;
           margin-top: 50px;
           margin-left: 173px;
+          margin-bottom: 0;
+          padding: 0;
         }
 
         .emailLabel{
             margin-left: 65px;
             display: inline-block;
             margin-top: 30px;
+            margin-bottom: 0;
+            padding: 0;
         }
 
         .emailInput{
@@ -42,12 +46,16 @@
             margin-left: 50px;
             display: inline-block;
             margin-top: 15px;
+            margin-bottom: 0;
+            padding: 0;
         }
 
         .password-label{
             display: inline-block;
             margin-top: 30px;
             margin-left: 65px;
+            margin-bottom: 0;
+            padding: 0;
         }
         
         .password-input{
@@ -56,12 +64,19 @@
             margin-left: 50px;
             display: inline-block;
             margin-top: 15px;
+            margin-bottom: 0;
+            padding: 0;
         }
 
         .submitButton{
             display: inline-block;
+            width: 500px;
             margin-top: 40px;
             margin-left: 50px;
+            height: 60px;
+            border-radius: 10px;
+            margin-bottom: 0;
+            padding: 0;
         }
         
     }

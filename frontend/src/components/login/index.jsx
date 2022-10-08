@@ -3,6 +3,8 @@ import axios from "axios";
 
 import "./index.scss"
 
+import {useNavigate} from "react-router-dom";
+
 import {useDispatch} from "react-redux";
 import {LogInAction, SetEmailAction, SetAdminAction, RemoveAdminAction} from "../actions.js"
 
@@ -10,6 +12,7 @@ function Login(){
     var [password, setPassword] = React.useState("");
     var [email, setEmail] = React.useState("");
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const sendData = async(e) => {
         e.preventDefault();
         var data = {email, password};
@@ -23,9 +26,12 @@ function Login(){
             dispatch(SetEmailAction(email));
             if(response.data.admin === true){
                 dispatch(SetAdminAction());
+                navigate("/admin");
             }else{
                 dispatch(RemoveAdminAction())
             }
+
+
 
         }
     }
@@ -57,7 +63,7 @@ function Login(){
             onChange={(e) => setPassword(e.target.value)}
           />
           <br />
-          <button onClick={sendData} className = "submitButton"> Submit Form </button>
+          <button onClick={sendData} className = "submitButton"> Login To LogBook </button>
         </form>
       </div>
     );

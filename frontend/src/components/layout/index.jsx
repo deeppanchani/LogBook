@@ -2,7 +2,7 @@ import React from "react";
 import "./index.scss"
 import Navbar from "../navbar";
 import Login from "../login";
-
+import AdminDashBoard from "../admin";
  import {BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -12,7 +12,9 @@ function Layout(){
         <div>
           <Navbar />
             <Routes>
-                <Route exaact path = "" element = {<Login ></Login>} >
+                <Route exact path = "" element = {<Login ></Login>} >
+                </Route>
+                <Route exact path = "/admin" element = {<AdminDashBoard></AdminDashBoard>}>
                 </Route>
             </Routes>
         </div>
