@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./index.scss";
 import AddEmployee from "./addEmployee";
 import { useSelector, useDispatch } from "react-redux";
