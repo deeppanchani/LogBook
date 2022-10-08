@@ -29,6 +29,7 @@ function Login(){
                 navigate("/admin");
             }else{
                 dispatch(RemoveAdminAction())
+                navigate("/employee")
             }
 
 

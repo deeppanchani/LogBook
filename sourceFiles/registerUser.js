@@ -1,6 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
-import Employees from "../models/users";
+import Employees from "../models/users.js";
 
 var app = express();
 app.use(bodyParser.urlencoded({extended : true}));
