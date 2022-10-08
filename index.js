@@ -7,6 +7,7 @@ import loginFile from "./sourceFiles/login.js";
 import createUser from "./sourceFiles/fakeFile.js";
 import registerUser from "./sourceFiles/registerUser.js";
 import allEmployeesFile from "./sourceFiles/allEmployees.js";
+import addTaskFile from "./sourceFiles/addTask.js";
 
 var app = express();
 app.use(bodyParser.urlencoded({extended :true}));
@@ -18,6 +19,7 @@ connectDB();
 app.use("/login", loginFile);
 app.use("/addEmployee", registerUser);
 app.use("/getEmployees", allEmployeesFile);
+app.use('/addTask', addTaskFile);
 
 
 var port = 8181;
