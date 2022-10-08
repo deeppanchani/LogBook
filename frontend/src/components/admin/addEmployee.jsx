@@ -13,10 +13,16 @@ function AddEmployee(){
 
     const sendEmployeeData = async (event) => {
         event.preventDefault();
+        
         var admin = false
         var data = {name, email, contact, department, joining, password, admin};
         var response = await axios.post("/addEmployee", data);
-        console.log(response);
+        if (response.data == "Employee added to database succesfully"){
+            alert("Employee Added to database Successfully");
+        }else{
+            alert("Please try again with valid data");
+        }
+          console.log(response);
     }
 
     return (
@@ -24,27 +30,59 @@ function AddEmployee(){
         <form action="">
           <label htmlFor="name">Name</label>
           <br />
-          <input type="text" id = "name"/>
+          <input
+            type="text"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
           <br />
           <label htmlFor="email">Email</label>
           <br />
-          <input type="email" id = "email"/>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
           <br />
           <label htmlFor="contact">Contact Number</label>
           <br />
-          <input type="tel" id = "contact"/>
+          <input
+            type="tel"
+            id="contact"
+            value={contact}
+            onChange={(e) => setContact(e.target.value)}
+          />
           <br />
-          <label htmlFor="department" >Department</label>
+          <label htmlFor="department">Department</label>
           <br />
-          <input type="text" id = "department"/>
+          <input
+            type="text"
+            id="department"
+            value={department}
+            onChange={(e) => setDepartment(e.target.value)}
+          />
           <br />
           <label htmlFor="date">Joining Date</label>
           <br />
-          <input type="date" />
+          <input
+            type="date"
+            value={joining}
+            onChange={(e) => setJoining(e.target.value)}
+          />
           <br />
           <label htmlFor="password">Password</label>
           <br />
-          <input type="text" id = "password"/>
+          <input
+            type="text"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+            <br />
+          <button onClick = {sendEmployeeData}> Add </button>
+          <br />
         </form>
       </div>
     );
