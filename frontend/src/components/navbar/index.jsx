@@ -18,6 +18,7 @@ function Navbar(){
       if(isLoggedIn){
         // console.log(" we here ");
         dispatch(LogOutAction());
+        navi("/");
       }else{
         navi("/");
       }
