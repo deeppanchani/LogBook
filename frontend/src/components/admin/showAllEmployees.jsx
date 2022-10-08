@@ -1,4 +1,7 @@
 import React from "react";
+import {MdDelete, MdEdit} from "react-icons/md"
+import "./allEmployees.scss";
+
 
 function ShowAllData(props){
     console.log("this is from showAll Data");
@@ -6,8 +9,8 @@ function ShowAllData(props){
     console.log(data);
 
     return (
-        <div>
-            Data
+        <div className="allEmployees">
+            
         </div>
     )
 }

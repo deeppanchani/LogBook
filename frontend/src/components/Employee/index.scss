@@ -1,0 +1,17 @@
+.employee-dashboard{
+    display: grid;
+    grid-template-columns: 120px 8fr 20px 4fr 100px;
+
+    .top-employee{
+        grid-column: 2/3;
+        display: grid;
+        grid-template-columns: 2fr 3fr 1fr 1fr ;
+
+        .edit-button{
+            grid-column: 3/4;
+        }
+        .add-button{
+            grid-column: 4/5;
+        }
+    }
+}
