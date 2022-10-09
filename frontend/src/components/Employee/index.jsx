@@ -66,8 +66,8 @@ function EmployeeDashboard(){
             </div> */}
           <AllTasks props={allTasks} />
         </div>
-        {editProfileShow && <EditProfile />}
-        {addTaskShow && <AddTaskButton />}
+        {editProfileShow && <EditProfile props = {handlePress}/>}
+        {addTaskShow && <AddTaskButton props = {handleEdit}/>}
       </div>
     );
 }
