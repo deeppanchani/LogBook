@@ -5,6 +5,7 @@ import AddTaskButton from "./addTask";
 import axios from "axios";
 import AllTasks from "./TasksTable";
 import EditProfile from "./editProfile";
+import PieChart from "./PieChart";
 
 function EmployeeDashboard(){
     var [addTaskShow, setAddTask] = React.useState(false);
@@ -20,15 +21,19 @@ function EmployeeDashboard(){
     const getAllTasks =  async () => {
         var data = {email};
         var response = await axios.post("/getTasksForEmployee", data)
+
+
         // console.log(response);
         setAllTasks(response.data);
     }
 
     function handleEdit(){
+        setEditProfile(false);
         setAddTask(!addTaskShow);
     }
 
     function handlePress() {
+      setAddTask(false);
       setEditProfile(!editProfileShow);
     }
 
@@ -67,6 +72,7 @@ function EmployeeDashboard(){
            
           </div>
           <AllTasks props={allTasks} />
+          <PieChart props = {allTasks}/>
           {editProfileShow && <EditProfile props = {handlePress}/>}
           {addTaskShow && <AddTaskButton props = {handleEdit}/>}
         </div>
