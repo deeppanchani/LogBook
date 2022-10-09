@@ -2,30 +2,28 @@ import React from "react";
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS } from "chart.js/auto"
 
-function BarChart(){
+function BarChart(props){
     console.log("in bar");
-    var WorkingData = [10, 6, 4, 6, 7];
-    var MeetingDAta = [2, 3, 1, 3, 4];
-    var BreakDAta = [3, 3, 1, 2, 2];
+    var data = props.props;
     return(
         <div>
             <Bar
                 data={{
-                    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                    labels: data[0],
                     datasets: [
                         {
                             label: 'Working',
-                            data: WorkingData,
+                            data: data[1],
                             backgroundColor: '#29BF12'
                         },
                         {
                             label: 'Meeting',
-                            data: MeetingDAta,
+                            data: data[2],
                             backgroundColor: '#0361FF'
                         },
                         {
                             label: 'Break',
-                            data: BreakDAta,
+                            data: data[3],
                             backgroundColor: '#F21B3F'
                         }
                     ],
