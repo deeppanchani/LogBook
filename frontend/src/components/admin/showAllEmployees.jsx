@@ -13,8 +13,8 @@ function ShowAllData(props){
     const [employees, setEmployees] = useState(data);
     return (
         <div className="allEmployees">
-            <table class="content-table">
-                <thead class="s1">
+            <table className="content-table">
+                <thead className="s1">
                     <th>Name</th>
                     <th>Email</th>
                     <th>Contact</th>
@@ -24,7 +24,7 @@ function ShowAllData(props){
                 </thead>
                 <tbody>
                     {employees.map((employee) => (
-                        <tr class="b2">
+                        <tr className="b2">
                             <td>{employee.name}</td>
                             <td>{employee.email}</td>
                             <td>{employee.contact}</td>
