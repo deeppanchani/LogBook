@@ -9,8 +9,23 @@ function AllTasks(props){
     console.log(data);
 
     const [tasks, setTasks] = useState(data);
-    // console.log(tasks.lenthd)
+    const newArr = []
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
 
+    today = yyyy + '-' + mm + '-' + dd;
+    console.log("in table")
+    console.log(today)
+    console.log(data.length)
+    for(var i=0;i<data.length;i++){
+        console.log(data[i].start.slice(0, 10))
+        if(today == data[i].start.slice(0, 10)){
+            console.log("pushing")
+            newArr.push(data[i])
+        }
+    }
     return (
         <div className="tasklist">
             <table class="task-data">
@@ -21,7 +36,7 @@ function AllTasks(props){
                     <th>Time Taken</th>
                 </thead>
                 <tbody>
-                    {data.map((task) => (
+                    {newArr.map((task) => (
                         <tr>
                             <td>{task.type}</td>
                             <td>{task.description}</td>
