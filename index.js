@@ -8,6 +8,7 @@ import createUser from "./sourceFiles/fakeFile.js";
 import registerUser from "./sourceFiles/registerUser.js";
 import allEmployeesFile from "./sourceFiles/allEmployees.js";
 import addTaskFile from "./sourceFiles/addTask.js";
+import getTasksForEmployees from "./sourceFiles/getTasksForEmployees.js";
 
 var app = express();
 app.use(bodyParser.urlencoded({extended :true}));
@@ -20,7 +21,7 @@ app.use("/login", loginFile);
 app.use("/addEmployee", registerUser);
 app.use("/getEmployees", allEmployeesFile);
 app.use('/addTask', addTaskFile);
-
+app.use("/getTasksForEmployee", getTasksForEmployees);
 
 var port = 8181;
 
