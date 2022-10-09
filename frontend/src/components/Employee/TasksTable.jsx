@@ -29,7 +29,7 @@ function AllTasks(props){
     return (
         <div className="tasklist">
             <table className="task-data">
-                <thead>
+                <thead class="s2">
                     <th>Task Type</th>
                     <th>Task Description</th>
                     <th>Start Time</th>

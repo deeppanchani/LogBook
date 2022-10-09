@@ -69,20 +69,20 @@ function EmployeeDashboard(){
                 </div>
                 <div className="today-graph">
                     <div className="h3"><h3>Today’s Stats</h3></div>
-                    <div style={{"width":"500px"}}>
-                        <TodayEmployee props={allTasks} />
+                    <div className="border">
+                        <div style={{"width":"500px","margin":"auto"}}><TodayEmployee props={allTasks} /></div>
                     </div>
                 </div>
                 <div className="weekly-graph">
-                <div className="h3"><h3>Weekly Stats</h3></div>
-                    <div style={{"width":"500px"}}>
+                    <div className="h3"><h3>Weekly Stats</h3></div>
+                    <div className="border">
                         {/* <weekly props = {allTasks}/> */}
                     </div>
                 </div>
                 <div className="select-graph">
                 <div className="h3"><h3>Day-wise Stats</h3></div>
-                    <div style={{"width":"500px"}}>
-                        <TodayEmployee props={allTasks} />
+                    <div style={{"width":"500px"}} className="border">
+                        <div style={{"width":"500px","margin":"auto"}}><TodayEmployee props={allTasks} /></div>
                     </div>
                 </div>
             </div>
