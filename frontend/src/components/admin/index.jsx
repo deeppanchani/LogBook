@@ -38,7 +38,7 @@ function AdminDashBoard(){
       <div className="admin">
         <div className="top-part">
           <h3>All Employees</h3>
-          <button onClick = {handleAddEmployee}>Add + </button>
+          <button onClick = {handleAddEmployee} className="button">+ Add Employee</button>
         </div>
        {dataSet && <ShowAllData props = {allData}/>}
         {isAddEmployeeShow && <AddEmployee/>}

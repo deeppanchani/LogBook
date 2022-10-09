@@ -34,10 +34,10 @@ function ShowAllData(props){
                 <thead class="s1">
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Contact Number</th>
+                    <th>Contact</th>
                     <th>Department</th>
                     <th>Joining Date</th>
-                    <th>Edit/Delete</th>
+                    <th></th>
                 </thead>
                 <tbody>
                     {employees.map((employee) => (
@@ -47,7 +47,10 @@ function ShowAllData(props){
                             <td>{employee.contact}</td>
                             <td>{employee.department}</td>
                             <td>{employee.joining.slice(0, 10)}</td>
-                            <td><button>Edit</button><button>Delete</button></td>
+                            <td>
+                                <button><MdEdit size={25} color="#0361FF"/></button>
+                                <button><MdDelete size={25} color="#F21B3F"/></button>
+                            </td>
                         </tr>
                     ))} 
                 </tbody>

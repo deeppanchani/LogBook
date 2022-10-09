@@ -3,15 +3,16 @@ import axios from "axios";
 
 import "./editProfile.scss";
 
-function EditProfile(){
+function EditProfile(props){
 
     var d = new Date();
     var [name, setName] = React.useState("");
     var [contact, setContact] = React.useState("");
     var [password, setPassword] = React.useState("");
 
-    function updateData(){
-
+    function updateData(e){
+      e.preventDefault();
+      props.props();
     }
     
     return(

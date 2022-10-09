@@ -4,9 +4,11 @@ import {useSelector} from "react-redux"
 import AddTaskButton from "./addTask";
 import axios from "axios";
 import AllTasks from "./TasksTable";
+import EditProfile from "./editProfile";
 
 function EmployeeDashboard(){
     var [addTaskShow, setAddTask] = React.useState(false);
+    var [editProfileShow, setEditProfile] = React.useState(false);
     var isLoggedIn = useSelector((state) => state.isLoggedIn);
     var email = useSelector((state) => state.Email);
     var [allTasks, setAllTasks] = React.useState([]);
@@ -26,6 +28,10 @@ function EmployeeDashboard(){
         setAddTask(!addTaskShow);
     }
 
+    function handlePress() {
+      setEditProfile(!editProfileShow);
+    }
+
     if(isLoggedIn == false){
         return (
             <div>
@@ -33,31 +39,38 @@ function EmployeeDashboard(){
             </div>
         )
     }
+
+    
+
+    // function 
+
     else return (
         <div>
-            <div className="employee-dashboard">
+          <div className="employee-dashboard">
             <div className="top-employee">
-                <h3>Today's Tasks</h3>
-                <button className="edit-button" > Edit Profile</button>
-                <button className="add-button" onClick={handleEdit} >+ Add Task</button>
+              <h3>Today's Tasks</h3>
+              <button className="edit-button" onClick={handlePress}>
+                {" "}
+                Edit Profile
+              </button>
+              <button className="add-button" onClick={handleEdit}>
+                + Add Task
+              </button>
             </div>
             {/* <div className="statGraphDaily">
-                <PieChart charData  />
-            </div> */}
+                  <PieChart charData  />
+              </div> */}
             {/* <br />
-            <div className="weeklyGraph">
-                <BarChart charData  />
-            </div> */}
-            {addTaskShow && <AddTaskButton />}
-            {/* <br />+ */}
-
-          
+              <div className="weeklyGraph">
+                  <BarChart charData  />
+              </div> */}
+           
+          </div>
+          <AllTasks props={allTasks} />
+          {editProfileShow && <EditProfile props = {handlePress}/>}
+          {addTaskShow && <AddTaskButton props = {handleEdit}/>}
         </div>
-        <AllTasks props = {allTasks}/>
-
-        </div>
-        
-    )
-}
-
-export default EmployeeDashboard;
+      );
+  }
+  
+  export default EmployeeDashboard;
