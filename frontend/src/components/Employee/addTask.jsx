@@ -3,7 +3,7 @@ import axios from "axios";
 import "./addTask.scss";
 
 import {useSelector} from "react-redux"
-function AddTaskButton(){
+function AddTaskButton(props){
     var [type, setType] = React.useState("");
     var t = new Date();
     var [description, setDescription] = React.useState("");
@@ -13,7 +13,9 @@ function AddTaskButton(){
     var email = useSelector((state) => state.Email);
 
     const  AddTask = async (e) => {
+
         e.preventDefault();
+        props.props();
         var data = {email,type, description, startTime, duration};
         console.log(data);
         var response = await axios.post("addTask", data);
