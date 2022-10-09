@@ -30,7 +30,7 @@ function AddEmployee() {
   return (
     <div className="addTask">
       <span>
-        <h3 className="addNew">Add New Emoployee</h3>
+    	<h3 className="addNew">Add New Emoployee</h3>
       </span>
       <form action="">
         <label htmlFor="name">Name</label>
@@ -86,7 +86,10 @@ function AddEmployee() {
           onChange={(e) => setPassword(e.target.value)}
         />
         <br />
-        <button onClick={sendEmployeeData} className="button"> Add </button>
+        <button onClick={sendEmployeeData} className="button">
+          {" "}
+          Add{" "}
+        </button>
         <br />
       </form>
     </div>
