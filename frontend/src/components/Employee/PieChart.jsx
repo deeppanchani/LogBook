@@ -2,8 +2,9 @@ import React from "react";
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS } from "chart.js/auto"
 
-function BarChart(){
+function PieChart(){
     console.log("in bar");
+    var d = [5, 15, 10];
     return(
         <div>
             <Pie 
@@ -12,7 +13,7 @@ function BarChart(){
                     datasets: [
                         {
                             label: 'stat graph',
-                            data: [5, 15, 10],
+                            data: d,
                             backgroundColor: ['#29BF12', '#0361FF', '#F21B3F']
                         },
                     ],
@@ -21,4 +22,4 @@ function BarChart(){
         </div>
     )
 }
-export default BarChart;
+export default PieChart;
