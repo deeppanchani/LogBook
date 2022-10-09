@@ -22,7 +22,6 @@ function AdminDashBoard(){
     var response = await axios.get("/getEmployees");
     setAllData(response.data);
     setDataSet(true);
-    // console.log(response);
   } 
 
 
