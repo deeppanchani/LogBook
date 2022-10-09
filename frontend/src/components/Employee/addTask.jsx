@@ -4,7 +4,7 @@ import "./addTask.scss";
 
 import {useSelector} from "react-redux"
 function AddTaskButton(props){
-    var [type, setType] = React.useState("");
+    var [type, setType] = React.useState("Work");
     var t = new Date();
     var [description, setDescription] = React.useState("");
     var [startTime, setStart] = React.useState(t.getTime());
@@ -26,8 +26,11 @@ function AddTaskButton(props){
     }
 
     const handleType = (newType) => {
+        console.log(newType);
         setType(newType);
     }
+
+
 
     return (
         <div className="addTask">
