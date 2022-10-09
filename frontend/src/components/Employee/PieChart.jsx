@@ -12,7 +12,7 @@ function PieChart(props){
 
     return(
         <div>
-            <Pie 
+            <Pie
                 data={{
                     labels: ['Working', 'Meeting', 'Break'],
                     datasets: [

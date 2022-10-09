@@ -1,33 +1,87 @@
+$lightBlack : #1B1C21;
+$darkBlack : #141518;
+$white : #FDFCFF;
+$primaryPurple : #6100E0;
+$secondaryGreen : #29BF12;
+$secondaryRed : #F21B3F;
+$secondaryBlue : #0361FF;
+$grey: #AEAEAE;
+
+h3{
+    margin: 0;
+}
+
+.border{
+    border: 2px solid #AEAEAE;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    // box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
 .employee-dashboard{
     display: grid;
-    grid-template-columns: 120px 8fr 20px 4fr 100px;
+    grid-template-columns: 60% auto;
+    row-gap: 45px;
+    column-gap: 20px;
+    margin: 50px 100px;
 
-    .top-employee{
-        grid-column: 2/3;
+    .today-task{
         display: grid;
-        grid-template-columns: 2fr 3fr 1fr 1fr ;
-
+        grid-template-areas:    'h3 edit addtask''alltask alltask alltask'; 
+        grid-auto-rows: min-content;
+        .h3{
+            height: 50px;
+            grid-area: h3;
+        }
+        .edit{
+            height: 50px;
+            grid-area: edit;
+        }
+        .addtask{
+            height: 50px;
+            grid-area: addtask;
+        }
+        .alltask{  
+            margin-top: 20px; 
+            grid-area: alltask;
+        }
+        button{
+            float: right;
+            height: 47px;
+            color: #FDFCFF;
+            border: 0px;
+            border-radius: 10px;
+        }
         .edit-button{
-            grid-column: 3/4;
+            width: 145px;
+            background-color: #AEAEAE;
         }
         .add-button{
-            grid-column: 4/5;
+            width: 151px;
+            margin-right: 15px;
+            background-color: #0361FF;
+        }
+    }
+    .today-graph{
+        .h3{
+            height: 50px;
+            grid-area: h3;
         }
     }
 
-    $lightBlack : #1B1C21;
-    $darkBlack : #141518;
-    $white : #FDFCFF;
-    $primaryPurple : #6100E0;
-    $secondaryGreen : #29BF12;
-    $secondaryRed : #F21B3F;
-    $secondaryBlue : #0361FF;
-    $grey: #AEAEAE;
-}
+    .weekly-graph{
+        .h3{
+            height: 50px;
+            grid-area: h3;
+        }
+    }
 
-.statGraphDaily{
-    border: 1px solid black;
-    width: 300px;
-    height: 300px;
+    .select-graph{
+        .h3{
+            height: 50px;
+            grid-area: h3;
+        }
+    }
 }
 
