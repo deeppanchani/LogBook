@@ -1,6 +1,6 @@
 import React from "react";
-import "./index.scss";
-import { useSelector } from "react-redux";
+import "./index.scss"
+import {useSelector} from "react-redux"
 import AddTaskButton from "./addTask";
 import axios from "axios";
 import AllTasks from "./TasksTable";
@@ -44,44 +44,40 @@ function EmployeeDashboard(){
             </div>
         )
     }
-
-    
-
-  if (isLoggedIn == false) {
-    return <div>Please Login to Be here</div>;
-  }
-
     else return (
-        <div>
-          <div className="employee-dashboard">
-            <div className="top-employee">
-              <h3>Today's Tasks</h3>
-              <button className="edit-button" onClick={handlePress}>
-                {" "}
-                Edit Profile
-              </button>
-              <button className="add-button" onClick={handleEdit}>
-                + Add Task
-              </button>
+        <main>
+            <div className="employee-dashboard">
+                <div className="today-task">
+                    <div className="h3">
+                        <h3>Today’s Tasks</h3>
+                    </div>
+                    <div className="edit">
+                        <button className="edit-button button" onClick={handlePress}>
+                        Edit Profile
+                        </button>
+                    </div>
+                    <div className="addtask">
+                        <button className="add-button button" onClick={handleEdit}>
+                            + Add Task
+                        </button>
+                    </div>
+                    <div className="alltask">
+                        <AllTasks props={allTasks} />
+                    </div>
+                </div>
+                <div className="today-graph">
+                    <h3>Today’s Stats</h3>
+                    <PieChart props = {allTasks}/>
+                </div>
+                <div className="weekly-graph">
+                    <h3>Weekly Stats</h3>
+                </div>
+                <div className="select-graph">
+                    <h3>Day-wise Stats</h3>
+                </div>
             </div>
-            {/* <div className="statGraphDaily">
-                  <PieChart charData  />
-              </div> */}
-            {/* <br />
-              <div className="weeklyGraph">
-                  <BarChart charData  />
-              </div> */}
-           
-          </div>
-          <AllTasks props={allTasks} />
-          <PieChart props = {allTasks}/>
-          {editProfileShow && <EditProfile props = {handlePress}/>}
-          {addTaskShow && <AddTaskButton props = {handleEdit}/>}
-        </div>
-        {editProfileShow && <EditProfile props={handlePress} />}
-        {addTaskShow && <AddTaskButton props={handleEdit} />}
-      </main>
-    );
-}
-
-export default EmployeeDashboard;
+        </main>
+      );
+  }
+  
+  export default EmployeeDashboard;
