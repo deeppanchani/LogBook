@@ -39,9 +39,9 @@ function Login(){
     return (
       <div className="form-page">
         <form action="" className="form">
-          <h3 className="welcome">Welcome Back</h3>
+          <h3>Welcome Back</h3>
           <br />
-          <label htmlFor="email" className = "emailLabel">Email</label>
+          <label htmlFor="email" className = "emailLabel s2">Email</label>
           <br />
           <input
             type="email"
@@ -52,19 +52,19 @@ function Login(){
             onChange={(e) => setEmail(e.target.value)}
           />
           <br />
-          <label htmlFor="password" className="password-label">Password</label>
+          <label htmlFor="password" className="password-label s2">Password</label>
           <br />
           <input
           required = {true}
             id = "password"
             type="password"
-            placeholder=" password"
+            placeholder="Password"
             value={password}
             className = "password-input"
             onChange={(e) => setPassword(e.target.value)}
           />
           <br />
-          <button onClick={sendData} className = "submitButton"> Login To LogBook </button>
+          <button onClick={sendData} className = "submitButton button"> Login To LogBook </button>
         </form>
       </div>
     );

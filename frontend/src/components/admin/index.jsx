@@ -22,13 +22,12 @@ function AdminDashBoard(){
     var response = await axios.get("/getEmployees");
     setAllData(response.data);
     setDataSet(true);
-    // console.log(response);
   } 
 
 
     const isAdmin = useSelector((state) => state.isAdmin);
     // console.log(isAdmin);
-    if(isAdmin == false){
+    if(isAdmin === false){
         return (
             <div>
                 Please Login with Admin id

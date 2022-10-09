@@ -18,7 +18,7 @@ function AddEmployee(){
         var admin = false
         var data = {name, email, contact, department, joining, password, admin};
         var response = await axios.post("/addEmployee", data);
-        if (response.data == "Employee added to database succesfully"){
+        if (response.data === "Employee added to database succesfully"){
             alert("Employee Added to database Successfully");
         }else{
             alert("Please try again with valid data");
@@ -29,6 +29,7 @@ function AddEmployee(){
     return (
       <div>
         <form action="">
+          <h3 className="addNew">Add New Emoployee</h3>
           <label htmlFor="name">Name</label>
           <br />
           <input

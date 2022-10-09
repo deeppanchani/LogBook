@@ -1,9 +1,18 @@
+$lightBlack : #1B1C21;
+$darkBlack : #141518;
+$white : #FDFCFF;
+$primaryPurple : #6100E0;
+$secondaryGreen : #29BF12;
+$secondaryRed : #F21B3F;
+$secondaryBlue : #0361FF;
+$grey: #AEAEAE;
 .nav{
     margin-left: 100px;
     margin-right: 100px;
     height: 90px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
     
     .logos{
         height: 90px;
@@ -19,11 +28,11 @@
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-around;
+            img{
+                padding-right: 10px;
+            }
             h2{
-                // padding-bottom: 40px;
-                // margin-bottom: 10px;
-                // padding-left: 10px;
-                height: 50px;
+                padding-left: 10px;
             }
         }
     }
@@ -36,6 +45,14 @@
         align-items: center;
         .mode-button{
             margin-right: 50px;
+        }
+        .LogButton{
+            background-color: #6100E0;
+            padding: 5px 15px;
+            border: 0px;
+            border-radius: 10px;
+            color: #FDFCFF;
+            cursor: pointer;
         }
     }
 

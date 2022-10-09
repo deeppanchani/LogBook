@@ -40,9 +40,17 @@ function EmployeeDashboard(){
                 <button className="edit-button" > Edit Profile</button>
                 <button className="add-button" onClick={handleEdit} >+ Add Task</button>
             </div>
+            {/* <div className="statGraphDaily">
+                <PieChart charData  />
+            </div> */}
+            {/* <br />
+            <div className="weeklyGraph">
+                <BarChart charData  />
+            </div> */}
             {addTaskShow && <AddTaskButton />}
             <AllTasks props = {allTasks}/>
         </div>
+        
     )
 }
 
