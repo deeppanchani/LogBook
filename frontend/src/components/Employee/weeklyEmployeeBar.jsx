@@ -7,12 +7,12 @@ function WeeklyEmployeeBar(props){
     var totalMeet = []
     var totalBreak = []
     var pastDates = []
-    for(var i=6;i>=0;i++){
+    for(var j=6;j>=0;j--){
         var work = 0;
         var meet = 0;
         var recess = 0;
         var today = new Date();
-        today.setDate(today.getDate() - i);
+        today.setDate(today.getDate() - j);
         var dd = String(today.getDate()).padStart(2, "0");
         var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
         var yyyy = today.getFullYear();
@@ -42,12 +42,12 @@ function WeeklyEmployeeBar(props){
             // console.log(typeof dateloc)
             // if(dateloc ==)
             // if()
-            totalBreak.push(recess);
-            totalMeet.push(meet);
-            totalWork.push(work);
-            pastDates.push(today);
             console.log(current);
         }
+        totalBreak.push(recess);
+        totalMeet.push(meet);
+        totalWork.push(work);
+        pastDates.push(today);
     }
     var toPass= [pastDates, totalWork, totalMeet, totalBreak]
     return (
