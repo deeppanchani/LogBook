@@ -7,6 +7,8 @@ import AllTasks from "./TasksTable";
 import EditProfile from "./editProfile";
 import PieChart from "./PieChart";
 
+import TodayEmployee from "./todayEmployee"; 
+
 function EmployeeDashboard(){
     var [addTaskShow, setAddTask] = React.useState(false);
     var [editProfileShow, setEditProfile] = React.useState(false);

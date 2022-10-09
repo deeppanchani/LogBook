@@ -28,7 +28,7 @@ function AddEmployee() {
   };
 
   return (
-    <div class="addTask">
+    <div className="addTask">
       <span>
         <h3 className="addNew">Add New Emoployee</h3>
       </span>
