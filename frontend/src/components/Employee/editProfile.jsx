@@ -44,7 +44,7 @@ function EditProfile(){
             onChange={(e) => setPassword(e.target.value)}
           />
             <br />
-          <button onClick = {updateData}> Update Profile </button>
+          {/* <button onClick = {updateData}> Update Profile </button> */}
           <br />
         </form>
       </div>
