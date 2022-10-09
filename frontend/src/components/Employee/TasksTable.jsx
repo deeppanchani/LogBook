@@ -28,7 +28,7 @@ function AllTasks(props){
     }
     return (
         <div className="tasklist">
-            <table class="task-data">
+            <table className="task-data">
                 <thead>
                     <th>Task Type</th>
                     <th>Task Description</th>

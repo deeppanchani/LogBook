@@ -7,6 +7,8 @@ import AllTasks from "./TasksTable";
 import EditProfile from "./editProfile";
 import PieChart from "./PieChart";
 
+import TodayEmployee from "./todayEmployee"; 
+
 function EmployeeDashboard(){
     var [addTaskShow, setAddTask] = React.useState(false);
     var [editProfileShow, setEditProfile] = React.useState(false);
@@ -72,7 +74,7 @@ function EmployeeDashboard(){
            
           </div>
           <AllTasks props={allTasks} />
-          <PieChart props = {allTasks}/>
+          <TodayEmployee props = {allTasks}/>
           {editProfileShow && <EditProfile props = {handlePress}/>}
           {addTaskShow && <AddTaskButton props = {handleEdit}/>}
         </div>
