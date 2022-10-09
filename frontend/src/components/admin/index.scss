@@ -11,17 +11,22 @@ $grey: #AEAEAE;
     .top-part{
 
         display: grid;
-        grid-template-columns:  3fr 5fr 1fr;
-        h3{
-            grid-column: 1/2;
-            margin-top: 54px;
-            margin-left: 113px;
-        }
-
+        margin-top: 50px;
+        margin-left: 120px;
+        margin-right: 120px;
+        margin-bottom: 30px;
+        grid-template-columns: 648px 648px;
         button{
-            grid-column: 3/4;
-            width: 100px;
+            margin-left: 444px;
+            margin-right: 0px;
             height: 47px;
+            width: 204px;
+            background-color: #0361FF;
+            padding: 5px 15px;
+            border: 0px;
+            border-radius: 10px;
+            color: #FDFCFF;
+            cursor: pointer;
         }
     }
 }
