@@ -34,7 +34,8 @@ function EmployeeDashboard(){
         )
     }
     else return (
-        <div className="employee-dashboard">
+        <div>
+            <div className="employee-dashboard">
             <div className="top-employee">
                 <h3>Today's Tasks</h3>
                 <button className="edit-button" > Edit Profile</button>
@@ -48,7 +49,12 @@ function EmployeeDashboard(){
                 <BarChart charData  />
             </div> */}
             {addTaskShow && <AddTaskButton />}
-            <AllTasks props = {allTasks}/>
+            {/* <br />+ */}
+
+          
+        </div>
+        <AllTasks props = {allTasks}/>
+
         </div>
         
     )
