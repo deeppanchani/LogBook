@@ -68,16 +68,26 @@ function EmployeeDashboard(){
                     </div>
                 </div>
                 <div className="today-graph">
-                    <h3>Today’s Stats</h3>
-                    <PieChart props = {allTasks}/>
+                    <div className="h3"><h3>Today’s Stats</h3></div>
+                    <div style={{"width":"500px"}}>
+                        <TodayEmployee props={allTasks} />
+                    </div>
                 </div>
                 <div className="weekly-graph">
-                    <h3>Weekly Stats</h3>
+                <div className="h3"><h3>Weekly Stats</h3></div>
+                    <div style={{"width":"500px"}}>
+                        {/* <weekly props = {allTasks}/> */}
+                    </div>
                 </div>
                 <div className="select-graph">
-                    <h3>Day-wise Stats</h3>
+                <div className="h3"><h3>Day-wise Stats</h3></div>
+                    <div style={{"width":"500px"}}>
+                        <TodayEmployee props={allTasks} />
+                    </div>
                 </div>
             </div>
+            {editProfileShow && <EditProfile props = {handlePress}/>}
+            {addTaskShow && <AddTaskButton props = {handleEdit}/>}
         </main>
       );
   }
