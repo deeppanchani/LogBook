@@ -18,6 +18,7 @@ function ShowAllData(props){
         idSelected,
         setDeleteShow
     }
+    
     return (
         <div className="allEmployees">
             <table className="content-table">

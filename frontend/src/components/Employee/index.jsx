@@ -10,11 +10,13 @@ import PieChart from "./PieChart";
 import TodayEmployee from "./todayEmployee"; 
 
 function EmployeeDashboard(){
+    var date = new Date();
     var [addTaskShow, setAddTask] = React.useState(false);
     var [editProfileShow, setEditProfile] = React.useState(false);
     var isLoggedIn = useSelector((state) => state.isLoggedIn);
     var email = useSelector((state) => state.Email);
     var [allTasks, setAllTasks] = React.useState([]);
+    var [dateWise, setDateWise] = React.useState(date)
 
     React.useEffect(() => {
         getAllTasks();
@@ -81,6 +83,11 @@ function EmployeeDashboard(){
                 </div>
                 <div className="select-graph">
                 <div className="h3"><h3>Day-wise Stats</h3></div>
+                    <form action="">
+                        <input type="date" name="" id="" 
+                        value = {dateWise}
+                        onChange={(e) => setDateWise(e.target.value)}/>
+                    </form>
                     <div style={{"width":"500px"}}>
                         <TodayEmployee props={allTasks} />
                     </div>
