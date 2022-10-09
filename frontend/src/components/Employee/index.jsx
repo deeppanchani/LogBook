@@ -45,31 +45,32 @@ function EmployeeDashboard(){
     // function 
 
     else return (
-      <div>
-        <div className="employee-dashboard">
-          <div className="top-employee">
-            <h3>Today's Tasks</h3>
-            <button className="edit-button" onClick={handlePress}>
-              {" "}
-              Edit Profile
-            </button>
-            <button className="add-button" onClick={handleEdit}>
-              + Add Task
-            </button>
+        <div>
+          <div className="employee-dashboard">
+            <div className="top-employee">
+              <h3>Today's Tasks</h3>
+              <button className="edit-button" onClick={handlePress}>
+                {" "}
+                Edit Profile
+              </button>
+              <button className="add-button" onClick={handleEdit}>
+                + Add Task
+              </button>
+            </div>
+            {/* <div className="statGraphDaily">
+                  <PieChart charData  />
+              </div> */}
+            {/* <br />
+              <div className="weeklyGraph">
+                  <BarChart charData  />
+              </div> */}
+           
           </div>
-          {/* <div className="statGraphDaily">
-                <PieChart charData  />
-            </div> */}
-          {/* <br />
-            <div className="weeklyGraph">
-                <BarChart charData  />
-            </div> */}
           <AllTasks props={allTasks} />
+          {editProfileShow && <EditProfile props = {handlePress}/>}
+          {addTaskShow && <AddTaskButton props = {handleEdit}/>}
         </div>
-        {editProfileShow && <EditProfile props = {handlePress}/>}
-        {addTaskShow && <AddTaskButton props = {handleEdit}/>}
-      </div>
-    );
-}
-
-export default EmployeeDashboard;
+      );
+  }
+  
+  export default EmployeeDashboard;
