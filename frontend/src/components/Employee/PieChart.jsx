@@ -15,11 +15,13 @@ function PieChart(props){
 
     today = yyyy + '-' + mm + '-' + dd;
 
-
+    console.log(today);
 
     // console.log("today is " + today);
     for(var i = 0; i < data.length; i++){
+        console.log("we in here ");
         var current = data[i];
+        console.log(current);
         var dateloc = current.start.toString()
         dateloc = dateloc.slice(0,10);
         // console.log("first is " + dateloc)
@@ -42,6 +44,13 @@ function PieChart(props){
     }
 
     console.log("in bar");
+    if(work == 0 && meet == 0 && recess == 0){
+        return (
+            <div>
+                " "
+            </div>
+        )
+    }
     return(
         <div>
             <Pie 
