@@ -5,6 +5,7 @@ import AddTaskButton from "./addTask";
 import axios from "axios";
 import AllTasks from "./TasksTable";
 import EditProfile from "./editProfile";
+import WeeklyEmployeeBar from "./weeklyEmployeeBar";
 import PieChart from "./PieChart";
 
 import TodayEmployee from "./todayEmployee"; 
@@ -76,7 +77,7 @@ function EmployeeDashboard(){
                 <div className="weekly-graph">
                     <div className="h3"><h3>Weekly Stats</h3></div>
                     <div className="border">
-                        {/* <weekly props = {allTasks}/> */}
+                        <WeeklyEmployeeBar props={allTasks} />
                     </div>
                 </div>
                 <div className="select-graph">
