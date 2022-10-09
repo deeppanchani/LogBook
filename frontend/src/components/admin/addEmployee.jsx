@@ -12,11 +12,9 @@ function AddEmployee(){
     var [joining, setJoining] = React.useState(d.getTime());
     var [password, setPassword] = React.useState("");
 
-    
-
     const sendEmployeeData = async (event) => {
         event.preventDefault();
-        
+         
         var admin = false
         var data = {name, email, contact, department, joining, password, admin};
         var response = await axios.post("/addEmployee", data);

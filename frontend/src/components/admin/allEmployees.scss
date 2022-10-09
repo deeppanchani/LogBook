@@ -34,3 +34,21 @@
 #btn2 {
     width: 350px;
 }
+
+/*Employees Data*/
+
+
+.content-table{
+    border-collapse: collapse;
+    border-radius: 20px;
+    margin: auto;
+}
+
+thead, tr {
+    border: 1px solid black;
+    text-align: left;
+}
+
+.content-table th, .content-table td{
+    padding: 15px 25px;
+}
