@@ -9,16 +9,18 @@ app.use(bodyParser.json());
 
 app.post("/", (req, res) => {
     var data = req.body;
+    console.log(data);
     var task  = new Tasks({
         email : data.email,
-        type : data.email,
-        start : data.start,
+        type : data.type,
+        start : data.startTime,
         description : data.description,
         duration : data.duration
     })
 
     try{
         task.save();
+        console.log("task saved")
         res.send("task saved succesfully");
     }
     catch(err){
