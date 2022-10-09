@@ -6,7 +6,7 @@ import "./index.scss"
 import {useNavigate} from "react-router-dom";
 
 import {useDispatch} from "react-redux";
-import {LogInAction, SetEmailAction, SetAdminAction, RemoveAdminAction} from "../actions.js"
+import {LogInAction, SetEmailAction, SetAdminAction, RemoveAdminAction, SetMobileAction, SetPasswordAction, SetNameAction} from "../actions.js"
 
 function Login(){
     var [password, setPassword] = React.useState("");
@@ -24,6 +24,9 @@ function Login(){
         else{
             dispatch(LogInAction());
             dispatch(SetEmailAction(email));
+            dispatch(SetMobileAction(response.data.contact));
+            dispatch(SetNameAction(response.data.name));
+            dispatch(SetPasswordAction(response.data.password));
             if(response.data.admin === true){
                 dispatch(SetAdminAction());
                 navigate("/admin");

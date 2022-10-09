@@ -20,7 +20,7 @@ app.post("/", (req, res) => {
             console.log(err);
             res.send("Error");
         }else{
-            console.log(result);
+            // console.log(result);
             res.send(result);
         }
     })

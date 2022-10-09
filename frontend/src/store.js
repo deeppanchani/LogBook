@@ -23,6 +23,41 @@ const emailReducer = (state = "", action) => {
   }
 };
 
+
+const passwordReducer = (state = "", action) => {
+  switch (action.type) {
+    case "SetPassword":
+      return action.payload;
+    case "RemovePasword":
+      return "";
+    default:
+      return state;
+  }
+};
+
+
+const mobileReducer = (state = "", action) => {
+  switch (action.type) {
+    case "SetMobile":
+      return action.payload;
+    case "RemoveMobile":
+      return "";
+    default:
+      return state;
+  }
+};
+
+const nameReducer = (state = "", action) => {
+  switch (action.type) {
+    case "SetName":
+      return action.payload;
+    case "RemoveName":
+      return "";
+    default:
+      return state;
+  }
+};
+
 const isAdminReducer = (state = false, action) => {
   switch (action.type) {
     case "SetAdmin":
@@ -39,6 +74,9 @@ const store = configureStore({
     isLoggedIn: LoginReducer,
     Email: emailReducer,
     isAdmin: isAdminReducer,
+    name : nameReducer,
+    password : passwordReducer,
+    mobile : mobileReducer
   },
 });
 
