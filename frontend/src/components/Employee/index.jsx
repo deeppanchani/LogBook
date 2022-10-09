@@ -25,10 +25,12 @@ function EmployeeDashboard(){
     }
 
     function handleEdit(){
+        setEditProfile(false);
         setAddTask(!addTaskShow);
     }
 
     function handlePress() {
+      setAddTask(false);
       setEditProfile(!editProfileShow);
     }
 
