@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import "./addTask.scss";
 
 import {useSelector} from "react-redux"
 function AddTaskButton(){
@@ -27,23 +28,28 @@ function AddTaskButton(){
     }
 
     return (
-        <div>
-           <form >
-                <select value = {type} onChange = {(event) => handleType(event.target.value)}>
+        <div className="addTask">
+           <form className="button">
+                <label htmlFor="type" className="s2">Task Type</label>
+                <select id="type" value = {type} onChange = {(event) => handleType(event.target.value)}>
                     <option value="Work">Work</option>
                     <option value="Meeting">Meeting</option>
                     <option value="Break">Break</option>
                 </select>
                 <br />
-                <input type="text" 
+                <label htmlFor="description" className="s2">Type Description</label>
+                <input type="text" id="description"
                 value={description}
                 onChange = {(e) => setDescription(e.target.value)}/>
                 <br />
+                <label htmlFor="type" className="s2">Task Type</label>
                 <input type = "datetime-local" value = {startTime}
                 onChange = {(e) => setStart(e.target.value)}/>
                 <br />
+                <label htmlFor="type" className="s2">Task Type</label>
                 <input type="number" value = {duration}
                 onChange = {(e) => setDuration(e.target.value)}/>
+                <br></br>
                 <button onClick = {AddTask}>
                     Add Task
                 </button>

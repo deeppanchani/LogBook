@@ -1,0 +1,26 @@
+.addTask{
+    border: 1px solid #1B1C21;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 600px;
+    form{
+        padding-left: 50px;
+        label::after {
+            content: "*";
+            width: 1.5em;
+            margin-right: 1.5em;
+            color: #F21B3F;
+        }
+        select{
+            width: 500px;
+            font-size: 22.5px;
+        }
+        input{
+            width: 500px;
+            font-size: 22.5px;
+        }
+        button{
+            width: 500px;
+        }
+    }
+}
