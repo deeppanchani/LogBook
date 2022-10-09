@@ -9,7 +9,7 @@ import registerUser from "./sourceFiles/registerUser.js";
 import allEmployeesFile from "./sourceFiles/allEmployees.js";
 import addTaskFile from "./sourceFiles/addTask.js";
 import getTasksForEmployees from "./sourceFiles/getTasksForEmployees.js";
-
+import updateEmployeesFile from "./sourceFiles/updateEmployee.js";
 var app = express();
 app.use(bodyParser.urlencoded({extended :true}));
 
@@ -22,6 +22,7 @@ app.use("/addEmployee", registerUser);
 app.use("/getEmployees", allEmployeesFile);
 app.use('/addTask', addTaskFile);
 app.use("/getTasksForEmployee", getTasksForEmployees);
+app.use("/updateEmployee", updateEmployeesFile);
 
 var port = 8181;
 

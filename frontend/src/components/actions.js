@@ -17,6 +17,28 @@ export const SetEmailAction = (email) => {
   };
 };
 
+export const SetMobileAction = (mobile) => {
+  return {
+    type: "SetMobile",
+    payload: mobile,
+  };
+};
+
+export const SetPasswordAction = (pass) => {
+  return {
+    type: "SetPassword",
+    payload: pass,
+  };
+};
+
+export const SetNameAction = (name) => {
+  return {
+    type: "SetName",
+    payload: name,
+  };
+};
+
+
 export const RemoveEmailAction = () => {
   return {
     type: "RemoveEmail",
