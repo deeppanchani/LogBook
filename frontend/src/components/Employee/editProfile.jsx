@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-import "./editProfile.scss";
+import "./addTask.scss";
 
 function EditProfile(props){
 
@@ -16,8 +16,9 @@ function EditProfile(props){
     }
     
     return(
-        <div>
-        <form action="">
+        <div className="addTask">
+        <span><h2>Edit Profile</h2></span>
+        <form action="" className="button">
           <label htmlFor="name">Name</label>
           <br />
           <input
@@ -45,7 +46,7 @@ function EditProfile(props){
             onChange={(e) => setPassword(e.target.value)}
           />
             <br />
-          <button onClick = {updateData}> Update Profile </button>
+          <button onClick = {updateData} className="button"> Update Profile </button>
           <br />
         </form>
       </div>
