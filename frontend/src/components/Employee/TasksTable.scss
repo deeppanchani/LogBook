@@ -1,0 +1,23 @@
+.task-data{
+    border-collapse: collapse;
+    margin: auto;
+    border: 1px solid #AEAEAE;
+    border-collapse: separate;
+    border-spacing: 0px;
+    border-radius: 20px;
+    text-align: left;
+    th{
+        padding: 15px 15px;
+    }
+    td{
+        border-top: 1px solid #AEAEAE;
+        padding: 10px 10px;
+        button{
+            background-color: transparent;
+            border: 0px;
+            margin-left: 10px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    }
+}
