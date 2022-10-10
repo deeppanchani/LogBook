@@ -24,8 +24,9 @@ Employees at businesses and technical institutes set aside a significant amount 
 
 ## Guide
 Our app comprises of two processes, namely
-    - Frontend (React)
-    - Backend (Nodejs, Express, Mongodb)
+- Frontend (React)
+- Backend (Nodejs, Express, Mongodb)
+
 So both the processes need to be running concurrently for the proper functioning of the app. We do so by following the following steps :
 1. Download the folder on your local machine to whatever location you feel comfortable with as a zip and unzip it.
 2. Create a new file in the folder just parallel to index.js named as “.env”  and paste the following line on that file ``   URI = "mongodb+srv://prasoonraj:prasoontan1@cluster0.psjnyyn.mongodb.net/?retryWrites=true&w=majority"    ’’ 
@@ -44,7 +45,7 @@ Here are some credentials to use our app without any hassle.
 As this project is open source, feel free to get in touch with us and give new perspectives and helpful recommendations.
 
 ### Emails:
-prasoonrajpoot038@gmail.com
-dlplearning00@gmail.com
-yuvrajsinhkamaliya@gmail.com
-patilkrushna1208@gmail.com
+- prasoonrajpoot038@gmail.com
+- dlplearning00@gmail.com
+- yuvrajsinhkamaliya@gmail.com
+- patilkrushna1208@gmail.com
