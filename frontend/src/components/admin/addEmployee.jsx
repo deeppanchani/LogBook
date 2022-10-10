@@ -33,7 +33,7 @@ function AddEmployee(props) {
       <button className="cancel" onClick = {(e) => {
         e.preventDefault();
         props.setIsAddEmployeeShown(false)
-      }}><MdCancel size={30}/></button>
+      }}><MdCancel size={30} color="#F21B3F"/></button>
       <div className="addTask">
         <span>
         <h3 className="addNew">Add New Emoployee</h3>

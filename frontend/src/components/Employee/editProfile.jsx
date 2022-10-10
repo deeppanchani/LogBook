@@ -31,7 +31,7 @@ function EditProfile(props){
             e.preventDefault();
             props.props();
           }}>
-            <MdCancel size={30}/>
+            <MdCancel size={30} color="#F21B3F"/>
           </button>
           <div className="addTask">
           <span><h2>Edit Profile</h2></span>

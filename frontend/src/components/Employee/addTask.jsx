@@ -39,7 +39,7 @@ function AddTaskButton(props){
                 e.preventDefault();
                 props.props();
             }}>
-                <MdCancel size={30}/>
+                <MdCancel size={30} color="#F21B3F"/>
             </button>
             <div className="addTask">
                 <span><h2>Add New Task</h2></span>
