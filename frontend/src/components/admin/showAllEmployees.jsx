@@ -23,16 +23,18 @@ function ShowAllData(props){
         <div className="allEmployees">
             <table className="content-table">
                 <thead className="s1">
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Contact</th>
-                    <th>Department</th>
-                    <th>Joining Date</th>
-                    <th></th>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Contact</th>
+                        <th>Department</th>
+                        <th>Joining Date</th>
+                        <th></th>
+                    </tr>
                 </thead>
                 <tbody>
                     {employees.map((employee) => (
-                        <tr className="b2">
+                        <tr className="b2" key={employee._id}>
                             <td>{employee.name}</td>
                             <td>{employee.email}</td>
                             <td>{employee.contact}</td>

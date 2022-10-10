@@ -21,7 +21,7 @@ function AllTasks(props){
     // console.log(data.length)
     for(var i=0;i<data.length;i++){
         // console.log(data[i].start.slice(0, 10))
-        if(today == data[i].start.slice(0, 10)){
+        if(today === data[i].start.slice(0, 10)){
             // console.log("pushing")
             newArr.push(data[i])
         }
@@ -29,15 +29,17 @@ function AllTasks(props){
     return (
         <div className="tasklist">
             <table className="task-data">
-                <thead class="s2">
-                    <th>Task Type</th>
-                    <th>Task Description</th>
-                    <th>Start Time</th>
-                    <th>Time Taken</th>
+                <thead className="s2">
+                    <tr>
+                        <th>Task Type</th>
+                        <th>Task Description</th>
+                        <th>Start Time</th>
+                        <th>Time Taken</th>
+                    </tr>
                 </thead>
                 <tbody>
                     {newArr.map((task) => (
-                        <tr>
+                        <tr key={task._id}>
                             <td>{task.type}</td>
                             <td>{task.description}</td>
                             <td>{task.start == null ? " 00:00:00" : task.start.slice(11,19)}</td>
