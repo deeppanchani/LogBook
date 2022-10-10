@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import {MdCancel} from "react-icons/md";
 import "./addTask.scss";
+import "./editProfile.scss";
 
 import {useSelector} from "react-redux"
 
@@ -21,8 +22,6 @@ function EditProfile(props){
       
     }
     
-
-
     return(
       <div className="modal">
           <button className="cancel" 
