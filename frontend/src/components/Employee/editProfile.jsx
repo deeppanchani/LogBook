@@ -9,7 +9,7 @@ function EditProfile(props){
     console.log("we in edit profile");
 
     var email = useSelector((state) => state.Email);
-    var d = new Date();
+    //var d = new Date();
     var [name, setName] = React.useState(useSelector((state) => state.name));
     var [contact, setContact] = React.useState(useSelector(state => state.mobile));
     var [password, setPassword] = React.useState(useSelector(state => state.password));

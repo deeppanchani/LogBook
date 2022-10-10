@@ -6,7 +6,6 @@ import axios from "axios";
 import AllTasks from "./TasksTable";
 import EditProfile from "./editProfile";
 import WeeklyEmployeeBar from "./weeklyEmployeeBar";
-import PieChart from "./PieChart";
 
 import TodayEmployee from "./todayEmployee";
 
@@ -48,7 +47,7 @@ function EmployeeDashboard() {
     //  console.log(typeof dateRequired);
   }, [dateRequired]);
 
-    if(isLoggedIn == false){
+    if(isLoggedIn === false){
         return (
             <div>
                 Please Login to Be here

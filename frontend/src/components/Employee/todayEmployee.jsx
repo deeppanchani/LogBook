@@ -29,10 +29,10 @@ function TodayEmployee(props) {
     var dateloc = current.start.toString();
     dateloc = dateloc.slice(0, 10);
     // console.log("first is " + dateloc)
-    if (dateloc == today) {
-      if (current.type == "Meeting") {
+    if (dateloc === today) {
+      if (current.type === "Meeting") {
         meet += current.duration;
-      } else if (current.type == "Work") {
+      } else if (current.type === "Work") {
         work += current.duration;
       } else {
         recess += current.duration;
@@ -46,7 +46,7 @@ function TodayEmployee(props) {
   }
 
   // console.log("in bar");
-  if (work == 0 && meet == 0 && recess == 0) {
+  if (work === 0 && meet === 0 && recess === 0) {
     return <div>" "</div>;
   }
   var toPass = [work, meet, recess];
