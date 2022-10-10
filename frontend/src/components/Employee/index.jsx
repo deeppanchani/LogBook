@@ -91,14 +91,13 @@ function EmployeeDashboard() {
                 </div>
                 <div className="select-graph">
                 <div className="h3"><h3>Day-wise Stats</h3></div>
-
-                    <div style={{"width":"500px"}} className="border">
-                        <form >
-                            <input type="date" value = {dateRequired}
-                            onChange = {(e) => setDateRequired(e.target.value)}/>
-                        </form>
-                        <div style={{"width":"500px","margin":"auto"}}><TodayEmployee props={allTasks} /></div>
-                    </div>
+                <div style={{"width":"500px"}} className="border">
+                    <form>
+                        <input type="date" value = {dateRequired} className="button"
+                        onChange = {(e) => setDateRequired(e.target.value)}/>
+                    </form>
+                    <div style={{"width":"500px","margin":"auto"}}><TodayEmployee props={allTasks} /></div>
+                </div>
                 </div>
             </div>
             {editProfileShow && <EditProfile props = {handlePress}/>}

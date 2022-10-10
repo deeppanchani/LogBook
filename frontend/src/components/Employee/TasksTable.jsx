@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+//import { useState } from "react";
 import "./TasksTable.scss";
 import "./index.scss";
 
@@ -7,8 +7,7 @@ function AllTasks(props){
 
     var data = props.props;
     // console.log(data);
-
-    const [tasks, setTasks] = useState(data);
+    // const [tasks, setTasks] = useState(data);
     const newArr = []
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
