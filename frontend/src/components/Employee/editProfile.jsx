@@ -17,7 +17,7 @@ function EditProfile(props){
     const  updateData = async (e) => {
       e.preventDefault();
       var data  = {email, name, contact, password};
-      var response = await axios.post("/updateEmployee", data);
+      await axios.post("/updateEmployee", data);
       props.props();
       
     }
