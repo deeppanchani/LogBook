@@ -18,7 +18,7 @@ function AddTaskButton(props){
         e.preventDefault();
         props.props();
         var data = {email,type, description, startTime, duration};
-        if(email == null || description == null || startTime == null || duration || null){
+        if(email == null || description == null || startTime == null || duration == null){
             alert("please enter all fields");
         }else{
             var response = await axios.post("addTask", data);
