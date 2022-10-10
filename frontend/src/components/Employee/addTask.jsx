@@ -18,10 +18,15 @@ function AddTaskButton(props){
         e.preventDefault();
         props.props();
         var data = {email,type, description, startTime, duration};
-        var response = await axios.post("addTask", data);
-        if(response.data === "task saved succesfully"){
-            alert("taks saved succesfully");
+        if(email == null || description == null || startTime == null || duration == null){
+            alert("please enter all fields");
+        }else{
+            var response = await axios.post("addTask", data);
+            if (response.data === "task saved succesfully") {
+              alert("taks saved succesfully");
+            }
         }
+        
     }
 
     const handleType = (newType) => {
