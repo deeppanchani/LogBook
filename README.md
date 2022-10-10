@@ -2,7 +2,7 @@
 
 ## Index
 - [Introduction](#introduction)
-- [Purose of LogBook](#purpose-of-logbook)
+- [Purpose of LogBook](#purpose-of-logbook)
 - [LogBook Attributes](#logbook-attributes)
 - [Benefits of LogBook](#benefits-of-logbook)
 - [Guide](#guide)
