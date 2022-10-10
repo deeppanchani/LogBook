@@ -32,6 +32,10 @@ Employees at businesses and technical institutes set aside a significant amount 
 - Admin can easily track and analyse work done by the employees.
 
 ## Guide
+You can directly go on to the website https://managementofemployee.herokuapp.com , which hosts our app, and test it out with the credentials given in the next section of guide.
+
+            OR     YOU      CAN     TEST    LOCALLY     BY
+            
 Our app comprises of two processes, namely
 - Frontend (React)
 - Backend (Nodejs, Express, Mongodb)
