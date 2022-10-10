@@ -24,6 +24,7 @@ function AddTaskButton(props){
             var response = await axios.post("addTask", data);
             if (response.data === "task saved succesfully") {
               alert("taks saved succesfully");
+              props.refreshTasks();
             }
         }
         

@@ -20,7 +20,9 @@ function AddEmployee(props) {
     var data = { name, email, contact, department, joining, password, admin };
     var response = await axios.post("/addEmployee", data);
     if (response.data === "Employee added to database succesfully") {
+
       alert("Employee Added to database Successfully");
+      props.refreshData();
     } else {
       alert("Please try again with valid data");
     }

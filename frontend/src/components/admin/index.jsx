@@ -52,7 +52,11 @@ function AdminDashBoard(){
           />
         )}
         {isAddEmployeeShow && (
-          <AddEmployee setIsAddEmployeeShown={setIsEmployee} />
+          <AddEmployee 
+          setAllData = {setAllData}
+          allData = {allData}
+          refreshData = {getAllEmployees}
+          setIsAddEmployeeShown={setIsEmployee} />
         )}
         {isEmployeeDataShown && (
           <Details
