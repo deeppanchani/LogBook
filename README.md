@@ -46,8 +46,8 @@ So both the processes need to be running concurrently for the proper functioning
 
 ### How to Test an App
 Here are some credentials to use our app without any hassle.
-- Mail: admin@gmail.com       			Password: asdf
-- Mail: test@gmail.com					Password: test
+- Admin Access Mail: admin@gmail.com       			Password: asdf
+- Employee Access Mail: test@gmail.com					Password: test
 
 ## Screenshots
 ### Login Page
