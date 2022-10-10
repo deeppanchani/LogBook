@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import "./addTask.scss";
+import {MdCancel} from "react-icons/md";
 
 import {useSelector} from "react-redux"
 function AddTaskButton(props){
@@ -34,6 +35,7 @@ function AddTaskButton(props){
 
     return (
         <div className="modal">
+            <button className="cancel"><MdCancel size={30}/></button>
             <div className="addTask">
                 <span><h2>Add New Task</h2></span>
                 <form className="button">

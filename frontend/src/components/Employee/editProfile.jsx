@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-
+import {MdCancel} from "react-icons/md";
 import "./addTask.scss";
 
 import {useSelector} from "react-redux"
@@ -26,6 +26,7 @@ function EditProfile(props){
     
     return(
       <div className="modal">
+          <button className="cancel"><MdCancel size={30}/></button>
           <div className="addTask">
           <span><h2>Edit Profile</h2></span>
           <form action="" className="button">
