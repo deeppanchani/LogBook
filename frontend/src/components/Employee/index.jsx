@@ -77,7 +77,7 @@ function EmployeeDashboard() {
                         </button>
                     </div>
                     <div className="alltask">
-                        <AllTasks props={allTasks} />
+                        <AllTasks props={allTasks} dateFor = {rightNow}/>
                     </div>
                 </div>
                 <div className="today-graph">

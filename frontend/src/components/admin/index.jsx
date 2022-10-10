@@ -45,7 +45,7 @@ function AdminDashBoard(){
         </div>
        {dataSet && <ShowAllData setEmployeeIdSelected = {setEmployeeIdSelected}  setEmployeeDateShown = {setEmployeeDateShown} props = {allData}/>}
         {isAddEmployeeShow && <AddEmployee setIsAddEmployeeShown = {setIsEmployee}/>}
-       {isEmployeeDataShown && <Details props = {EmployeeIdSelected}/>}
+       {isEmployeeDataShown && <Details email = {EmployeeIdSelected}/>}
       </div>
     );
 };
