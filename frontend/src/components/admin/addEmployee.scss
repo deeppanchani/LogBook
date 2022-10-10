@@ -1,64 +1,77 @@
 $secondaryBlue : #0361FF;
 $white : #FDFCFF;
-.addTask{
-    height: 100vh;
-    width: 100vw;
 
-    position: absolute;
-    opacity: 0.9;
-    background-color: #D8D8D8;
+
+.modal{
     top: 0px;
-    padding: 30px;
-    border: 1px solid #1B1C21;
-    border-radius: 20px;
-    overflow: hidden;
-    // width: 600px;
-    span{
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 20px;
+    width: 100vW;
+    position: fixed;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    background-color: rgba(27, 28, 33, 0.3);  
+    backdrop-filter: blur(5px);
+    .cancel{
+        background: transparent;
+        border: 0px;
+        position: absolute;
+        left: 300px;
     }
-    form{
-        width: 500px;
+
+    .addTask{
         margin: auto;
-        label{
-            margin-bottom: 15px;
-            padding-left: 15px;
+        background-color: $white;
+        padding: 30px;
+        border: 1px solid #1B1C21;
+        border-radius: 20px;
+        overflow: hidden;
+        width: 600px;
+        span{
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
         }
-        label::after {
-            content: "*";
-            width: 1.5em;
-            margin-right: 1.5em;
-            color: #F21B3F;
-        }
-        select{
-            margin: 15px 0px;
+        form{
             width: 500px;
-            font-size: 22.5px;
-            padding-left:  15px;
-            height: 50px;
-            border-radius: 10px;
-            border: 1px solid #1B1C21;
-        }
-        input{
-            margin: 15px 0px;
-            padding-left:  15px;
-            width: 482px;
-            font-size: 22.5px;
-            height: 50px;
-            border: 1px solid #1B1C21;
-            border-radius: 10px;
-        }
-        button{
-            width: 500px;
-            margin-top: 20px;
-            height: 50px;
-            border: 0px;
-            border-radius: 10px;
-            margin-bottom: 0;
-            color: $white;
-            background-color: $secondaryBlue;
-            cursor: pointer;
+            margin: auto;
+            label{
+                margin-bottom: 15px;
+                padding-left: 15px;
+            }
+            label::after {
+                content: "*";
+                width: 1.5em;
+                margin-right: 1.5em;
+                color: #F21B3F;
+            }
+            select{
+                margin: 15px 0px;
+                width: 500px;
+                font-size: 22.5px;
+                padding-left:  15px;
+                height: 50px;
+                border-radius: 10px;
+                border: 1px solid #1B1C21;
+            }
+            input{
+                margin: 15px 0px;
+                padding-left:  15px;
+                width: 482px;
+                font-size: 22.5px;
+                height: 50px;
+                border: 1px solid #1B1C21;
+                border-radius: 10px;
+            }
+            button{
+                width: 500px;
+                margin-top: 20px;
+                height: 50px;
+                border: 0px;
+                border-radius: 10px;
+                margin-bottom: 0;
+                color: $white;
+                background-color: $secondaryBlue;
+                cursor: pointer;
+            }
         }
     }
 }

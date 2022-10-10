@@ -20,7 +20,7 @@ function DeleteButton(props){
     }
 
     return (
-        <div>
+        <div className="modal">
             <div className="container">
                 <div className="data">
                     <h3>Are you absolutely sure?</h3>
@@ -33,9 +33,9 @@ function DeleteButton(props){
                         console.log("clicked")
                         data.setDeleteShow(false);
                     }}
-                    id="btn1" type="button">No, Dont Delete</button>
+                    id="btn1" className="button" type="button">No, Dont Delete</button>
                     <button  onClick = {deleteClicked}
-                    id="btn2" type="button">Yes, Delete the Employee</button>
+                    id="btn2" className="button" type="button">Yes, Delete the Employee</button>
                 </div>
             </div> 
         </div>

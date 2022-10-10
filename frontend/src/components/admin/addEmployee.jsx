@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import {MdCancel} from "react-icons/md";
 
 import "./addEmployee.scss";
 import "../Employee/addTask.scss";
@@ -28,67 +29,73 @@ function AddEmployee() {
   };
 
   return (
-    <div className="addTask">
-      <span>
+    <div className="modal">
+      <button className="cancel"><MdCancel size={30}/></button>
+      <div className="addTask">
+        <span>
         <h3 className="addNew">Add New Emoployee</h3>
-      </span>
-      <form action="">
-        <label htmlFor="name">Name</label>
-        <br />
-        <input
-          type="text"
-          id="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <br />
-        <label htmlFor="email">Email</label>
-        <br />
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <br />
-        <label htmlFor="contact">Contact Number</label>
-        <br />
-        <input
-          type="tel"
-          id="contact"
-          value={contact}
-          onChange={(e) => setContact(e.target.value)}
-        />
-        <br />
-        <label htmlFor="department">Department</label>
-        <br />
-        <input
-          type="text"
-          id="department"
-          value={department}
-          onChange={(e) => setDepartment(e.target.value)}
-        />
-        <br />
-        <label htmlFor="date">Joining Date</label>
-        <br />
-        <input
-          type="date"
-          value={joining}
-          onChange={(e) => setJoining(e.target.value)}
-        />
-        <br />
-        <label htmlFor="password">Password</label>
-        <br />
-        <input
-          type="text"
-          id="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <br />
-        <button onClick={sendEmployeeData} className="button"> Add </button>
-        <br />
-      </form>
+        </span>
+        <form action="">
+          <label htmlFor="name">Name</label>
+          <br />
+          <input
+            type="text"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <br />
+          <label htmlFor="email">Email</label>
+          <br />
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <br />
+          <label htmlFor="contact">Contact Number</label>
+          <br />
+          <input
+            type="tel"
+            id="contact"
+            value={contact}
+            onChange={(e) => setContact(e.target.value)}
+          />
+          <br />
+          <label htmlFor="department">Department</label>
+          <br />
+          <input
+            type="text"
+            id="department"
+            value={department}
+            onChange={(e) => setDepartment(e.target.value)}
+          />
+          <br />
+          <label htmlFor="date">Joining Date</label>
+          <br />
+          <input
+            type="date"
+            value={joining}
+            onChange={(e) => setJoining(e.target.value)}
+          />
+          <br />
+          <label htmlFor="password">Password</label>
+          <br />
+          <input
+            type="text"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <br />
+          <button onClick={sendEmployeeData} className="button">
+            {" "}
+            Add{" "}
+          </button>
+          <br />
+        </form>
+      </div>
     </div>
   );
 }

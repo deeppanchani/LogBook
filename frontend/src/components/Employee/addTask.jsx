@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import "./addTask.scss";
+import {MdCancel} from "react-icons/md";
 
 import {useSelector} from "react-redux"
 function AddTaskButton(props){
@@ -33,33 +34,36 @@ function AddTaskButton(props){
 
 
     return (
-        <div className="addTask">
-            <span><h2>Add New Task</h2></span>
-            <form className="button">
-                    <label htmlFor="type" className="s2">Task Type</label>
-                    <select id="type" value = {type} onChange = {(event) => handleType(event.target.value)}>
-                        <option value="Work">Work</option>
-                        <option value="Meeting">Meeting</option>
-                        <option value="Break">Break</option>
-                    </select>
-                    <br />
-                    <label htmlFor="description" className="s2">Type Description</label>
-                    <input type="text" id="description"
-                    value={description}
-                    onChange = {(e) => setDescription(e.target.value)}/>
-                    <br />
-                    <label htmlFor="datatime-local" className="s2">Task Type</label>
-                    <input id="datatime-local" type = "datetime-local" value = {startTime}
-                    onChange = {(e) => setStart(e.target.value)}/>
-                    <br />
-                    <label htmlFor="number" className="s2">Task Duration</label>
-                    <input id="number" type="number" value = {duration}
-                    onChange = {(e) => setDuration(e.target.value)}/>
-                    <br />
-                    <button onClick = {AddTask} className="button">
-                        Add Task
-                    </button>
-            </form>
+        <div className="modal">
+            <button className="cancel"><MdCancel size={30}/></button>
+            <div className="addTask">
+                <span><h2>Add New Task</h2></span>
+                <form className="button">
+                        <label htmlFor="type" className="s2">Task Type</label>
+                        <select id="type" value = {type} onChange = {(event) => handleType(event.target.value)}>
+                            <option value="Work">Work</option>
+                            <option value="Meeting">Meeting</option>
+                            <option value="Break">Break</option>
+                        </select>
+                        <br />
+                        <label htmlFor="description" className="s2">Type Description</label>
+                        <input type="text" id="description"
+                        value={description}
+                        onChange = {(e) => setDescription(e.target.value)}/>
+                        <br />
+                        <label htmlFor="datatime-local" className="s2">Task Type</label>
+                        <input id="datatime-local" type = "datetime-local" value = {startTime}
+                        onChange = {(e) => setStart(e.target.value)}/>
+                        <br />
+                        <label htmlFor="number" className="s2">Task Duration</label>
+                        <input id="number" type="number" value = {duration}
+                        onChange = {(e) => setDuration(e.target.value)}/>
+                        <br />
+                        <button onClick = {AddTask} className="button">
+                            Add Task
+                        </button>
+                </form>
+            </div>
         </div>
     )
 }
