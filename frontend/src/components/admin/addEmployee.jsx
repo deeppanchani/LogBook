@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import {MdCancel} from "react-icons/md";
+import { MdCancel } from "react-icons/md";
 
 import "./addEmployee.scss";
 import "../Employee/addTask.scss";
@@ -25,18 +25,22 @@ function AddEmployee(props) {
     } else {
       alert("Please try again with valid data");
     }
-    console.log(response);
   };
 
   return (
     <div className="modal">
-      <button className="cancel" onClick = {(e) => {
-        e.preventDefault();
-        props.setIsAddEmployeeShown(false)
-      }}><MdCancel size={30} color="#F21B3F"/></button>
+      <button
+        className="cancel"
+        onClick={(e) => {
+          e.preventDefault();
+          props.setIsAddEmployeeShown(false);
+        }}
+      >
+        <MdCancel size={30} color="#F21B3F" />
+      </button>
       <div className="addTask">
         <span>
-        <h3 className="addNew">Add New Emoployee</h3>
+          <h3 className="addNew">Add New Emoployee</h3>
         </span>
         <form action="">
           <label htmlFor="name">Name</label>

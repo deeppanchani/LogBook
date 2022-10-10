@@ -26,8 +26,6 @@ function EmployeeDashboard() {
   const getAllTasks = async () => {
     var data = { email };
     var response = await axios.post("/getTasksForEmployee", data);
-
-    // console.log(response);
     setAllTasks(response.data);
   };
 
@@ -42,9 +40,6 @@ function EmployeeDashboard() {
   }
 
   React.useEffect(() => {
-    // console.log(rightNow);
-    // console.log("changing date required to  " + dateRequired);
-    //  console.log(typeof dateRequired);
   }, [dateRequired]);
 
     if(isLoggedIn === false){

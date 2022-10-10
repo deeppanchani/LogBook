@@ -6,8 +6,6 @@ import "./index.scss";
 function AllTasks(props){
 
     var data = props.props;
-    // console.log(data);
-    // const [tasks, setTasks] = useState(data);
     const newArr = []
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
@@ -15,13 +13,8 @@ function AllTasks(props){
     var yyyy = today.getFullYear();
 
     today = yyyy + '-' + mm + '-' + dd;
-    // console.log("in table")
-    // console.log(today)
-    // console.log(data.length)
     for(var i=0;i<data.length;i++){
-        // console.log(data[i].start.slice(0, 10))
         if(today === data[i].start.slice(0, 10)){
-            // console.log("pushing")
             newArr.push(data[i])
         }
     }

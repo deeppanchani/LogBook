@@ -3,7 +3,6 @@ import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS } from "chart.js/auto"
 
 function BarChart(props){
-    // console.log("in bar");
     var data = props.props;
     return(
         <div>

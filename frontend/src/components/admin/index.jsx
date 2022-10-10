@@ -29,7 +29,6 @@ function AdminDashBoard(){
 
 
     const isAdmin = useSelector((state) => state.isAdmin);
-    // console.log(isAdmin);
     if(isAdmin === false){
         return (
             <div>

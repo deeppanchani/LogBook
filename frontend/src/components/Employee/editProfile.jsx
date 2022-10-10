@@ -6,7 +6,6 @@ import "./addTask.scss";
 import {useSelector} from "react-redux"
 
 function EditProfile(props){
-    console.log("we in edit profile");
 
     var email = useSelector((state) => state.Email);
     //var d = new Date();
