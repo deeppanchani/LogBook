@@ -5,7 +5,7 @@ import {MdCancel} from "react-icons/md";
 import "./addEmployee.scss";
 import "../Employee/addTask.scss";
 
-function AddEmployee() {
+function AddEmployee(props) {
   var d = new Date();
   var [name, setName] = React.useState("");
   var [email, setEmail] = React.useState("");
@@ -30,7 +30,10 @@ function AddEmployee() {
 
   return (
     <div className="modal">
-      <button className="cancel"><MdCancel size={30}/></button>
+      <button className="cancel" onClick = {(e) => {
+        e.preventDefault();
+        props.setIsAddEmployeeShown(false)
+      }}><MdCancel size={30}/></button>
       <div className="addTask">
         <span>
         <h3 className="addNew">Add New Emoployee</h3>

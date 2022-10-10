@@ -44,7 +44,7 @@ function AdminDashBoard(){
           <button  onClick = {handleAddEmployee} className="button">+ Add Employee</button>
         </div>
        {dataSet && <ShowAllData setEmployeeIdSelected = {setEmployeeIdSelected}  setEmployeeDateShown = {setEmployeeDateShown} props = {allData}/>}
-        {isAddEmployeeShow && <AddEmployee/>}
+        {isAddEmployeeShow && <AddEmployee setIsAddEmployeeShown = {setIsEmployee}/>}
        {isEmployeeDataShown && <Details props = {EmployeeIdSelected}/>}
       </div>
     );

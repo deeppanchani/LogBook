@@ -99,7 +99,9 @@ function EmployeeDashboard() {
                         <input type="date" value = {dateRequired} className="button"
                         onChange = {(e) => setDateRequired(e.target.value)}/>
                     </form>
-                    <div style={{"width":"500px","margin":"auto"}}><TodayEmployee props={allTasks} /></div>
+                    <div style={{"width":"500px","margin":"auto"}}>
+                        <TodayEmployee forDate = {dateRequired} props={allTasks} />
+                    </div>
                 </div>
                 </div>
             </div>
