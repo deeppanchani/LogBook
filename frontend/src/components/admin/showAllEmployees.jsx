@@ -41,7 +41,7 @@ function ShowAllData(props) {
                     props.setEmployeeDateShown(true);
                     props.setEmployeeIdSelected(employee.email);
                   }}
-                >{employee.name}
+                ><u>{employee.name}</u>
                 </button>
               </td>
 
