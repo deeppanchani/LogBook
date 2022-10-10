@@ -3,6 +3,7 @@ import "./index.scss";
 import AddEmployee from "./addEmployee";
 import ShowAllData from "./showAllEmployees";
 import { useSelector, useDispatch } from "react-redux";
+import Details from "./employeeDetails";
 import axios from "axios";
 
 
@@ -14,6 +15,8 @@ function AdminDashBoard(){
   var [dataSet, setDataSet] = React.useState(false);
   var[allData, setAllData] = React.useState([]);
   var [isAddEmployeeShow, setIsEmployee] = React.useState(false);
+  var [isEmployeeDataShown, setEmployeeDateShown] = React.useState(false);
+  var [EmployeeIdSelected, setEmployeeIdSelected] = React.useState("");
   function handleAddEmployee(){
     setIsEmployee(!isAddEmployeeShow);
   }
@@ -40,9 +43,9 @@ function AdminDashBoard(){
           <h3>All Employees</h3>
           <button  onClick = {handleAddEmployee} className="button">+ Add Employee</button>
         </div>
-       {dataSet && <ShowAllData   props = {allData}/>}
+       {dataSet && <ShowAllData setEmployeeIdSelected = {setEmployeeIdSelected}  setEmployeeDateShown = {setEmployeeDateShown} props = {allData}/>}
         {isAddEmployeeShow && <AddEmployee/>}
-       
+       {isEmployeeDataShown && <Details props = {EmployeeIdSelected}/>}
       </div>
     );
 };

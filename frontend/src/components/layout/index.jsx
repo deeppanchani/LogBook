@@ -4,6 +4,7 @@ import Navbar from "../navbar";
 import Login from "../login";
 import AdminDashBoard from "../admin";
 import EmployeeDashboard from "../Employee";
+// import Details from "../admin/employeeDetails";
  import {BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -18,6 +19,7 @@ function Layout(){
                 <Route exact path = "/admin" element = {<AdminDashBoard></AdminDashBoard>}>
                 </Route>
                 <Route exact path = "/employee" element = {<EmployeeDashboard></EmployeeDashboard>}> </Route>
+                {/* <Route exact path = "/details" element = {<Details />} /> */}
             </Routes>
         </div>
       </BrowserRouter>

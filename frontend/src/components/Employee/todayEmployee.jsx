@@ -3,16 +3,21 @@ import PieChart from "./PieChart";
 
 function TodayEmployee(props) {
   var data = props.props;
+  var today = props.forDate;
+  console.log("in today " + today);
 
   var work = 0;
   var meet = 0;
   var recess = 0;
-  var today = new Date();
-  var dd = String(today.getDate()).padStart(2, "0");
-  var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
-  var yyyy = today.getFullYear();
+  if(typeof (today) != "string"){
+    var dd = String(today.getDate()).padStart(2, "0");
+    var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+    var yyyy = today.getFullYear();
 
-  today = yyyy + "-" + mm + "-" + dd;
+    today = yyyy + "-" + mm + "-" + dd;
+  }
+  // var today = new Date();
+  
 
   // console.log(today);
 

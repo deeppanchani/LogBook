@@ -18,7 +18,7 @@ function EmployeeDashboard() {
   var email = useSelector((state) => state.Email);
   var [allTasks, setAllTasks] = React.useState([]);
 
-  var[dateRequired, setDateRequired] = React.useState()
+  var[dateRequired, setDateRequired] = React.useState(rightNow);
 
   React.useEffect(() => {
     getAllTasks();
@@ -44,7 +44,8 @@ function EmployeeDashboard() {
 
   React.useEffect(() => {
     // console.log(rightNow);
-    console.log("Date required is " + dateRequired);
+    console.log("changing date required to  " + dateRequired);
+     console.log(typeof dateRequired);
   }, [dateRequired]);
 
     if(isLoggedIn == false){
@@ -80,7 +81,9 @@ function EmployeeDashboard() {
                 <div className="today-graph">
                     <div className="h3"><h3>Today’s Stats</h3></div>
                     <div className="border">
-                        <div style={{"width":"500px","margin":"auto"}}><TodayEmployee props={allTasks} /></div>
+                        <div style={{"width":"500px","margin":"auto"}}>
+                            <TodayEmployee props={allTasks} forDate = {rightNow}/>
+                        </div>
                     </div>
                 </div>
                 <div className="weekly-graph">
@@ -97,7 +100,9 @@ function EmployeeDashboard() {
                             <input type="date" value = {dateRequired}
                             onChange = {(e) => setDateRequired(e.target.value)}/>
                         </form>
-                        <div style={{"width":"500px","margin":"auto"}}><TodayEmployee props={allTasks} /></div>
+                        <div style={{"width":"500px","margin":"auto"}}>
+                            <TodayEmployee forDate = {dateRequired} props={allTasks} />
+                        </div>
                     </div>
                 </div>
             </div>
