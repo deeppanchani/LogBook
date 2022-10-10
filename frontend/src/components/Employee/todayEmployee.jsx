@@ -30,9 +30,9 @@ function TodayEmployee(props) {
     }
   }
 
-  if (work === 0 && meet === 0 && recess === 0) {
-    return <div>" "</div>;
-  }
+  // if (work === 0 && meet === 0 && recess === 0) {
+  //   return <div>" "</div>;
+  // }
   var toPass = [work, meet, recess];
   return <PieChart props={toPass} />;
 }
