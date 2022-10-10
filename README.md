@@ -50,6 +50,35 @@ Here are some credentials to use our app without any hassle.
 - Mail: test@gmail.com					Password: test
 
 ## Screenshots
+### Login Page
+![Login Page](./README%20Images/loginpage.png)
+
+### Admin Dashboard
+![Admin Dashboard](./README%20Images/admindashboard.png)
+
+### Add Employee Modal
+![Add Employee Modal](./README%20Images/addemployeemodal.png)
+
+### Employee Delete
+![Employee Delete](./README%20Images/employeedelete.png)
+
+### Employee’s Task
+![Employee’s Task](./README%20Images/employeestask-1.png)
+
+![Employee’s Task](./README%20Images/employeestask-2.png)
+
+### Employee Dashboard
+![Employee Dashboard](./README%20Images/employeedashboard-1.png)
+
+![Employee Dashboard](./README%20Images/employeedashboard-2.png)
+
+### Edit Profile Modal
+![Edit Profile Modal](./README%20Images/editprofilemodal.png)
+
+### Add Task
+![Add Task](./README%20Images/addtask.png)
+
+
 ## Contact Us
 As this project is open source, feel free to get in touch with us and give new perspectives and helpful recommendations.
 
