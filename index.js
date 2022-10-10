@@ -1,6 +1,11 @@
 import express from "express";
 import bodyParser from "body-parser";
+import dotenv from "dotenv";
 
+import path from "path";
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 import connectDB from "./sourceFiles/connectDB.js";
 import loginFile from "./sourceFiles/login.js";
@@ -14,6 +19,8 @@ import deleteEmployeeFile from "./sourceFiles/deleteEmployee.js";
 var app = express();
 app.use(bodyParser.urlencoded({extended :true}));
 
+dotenv.config();
+
 
 connectDB();
 
@@ -26,7 +33,17 @@ app.use("/getTasksForEmployee", getTasksForEmployees);
 app.use("/updateEmployee", updateEmployeesFile);
 app.use("/deleteEmployee", deleteEmployeeFile);
 
-var port = 8181;
+var port = process.env.PORT || 8181;
+
+
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("frontend/build"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+  });
+}
+
 
 
 app.listen(port, () => {
