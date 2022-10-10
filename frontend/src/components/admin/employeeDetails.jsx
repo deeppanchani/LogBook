@@ -3,7 +3,7 @@ import axios from "axios";
 
 import AllTasks from "../Employee/TasksTable";
 import TodayEmployee from "../Employee/todayEmployee";
-
+import WeeklyEmployeeBar from "../Employee/weeklyEmployeeBar";
 
 function Details(props){
     var today = new Date();
@@ -31,7 +31,7 @@ function Details(props){
             </form>
            <AllTasks props = {allTasks} dateFor = {dateRequired}/>
            <TodayEmployee props = {allTasks} forDate = {dateRequired} />
-
+            <WeeklyEmployeeBar props = {allTasks} />
         </div>
     )
 }
