@@ -6,9 +6,7 @@ import "./index.scss";
 import DeleteButton from "./deleteEmployee";
 
 function ShowAllData(props){
-    console.log("this is from showAll Data");
     var data = props.props;
-    console.log(data);
 
     var [deleteShow, setDeleteShow] = React.useState(false);
     var [idSelected, setIdSelected] = React.useState("");

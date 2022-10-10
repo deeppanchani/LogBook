@@ -6,10 +6,9 @@ import "./addTask.scss";
 import {useSelector} from "react-redux"
 
 function EditProfile(props){
-    console.log("we in edit profile");
 
     var email = useSelector((state) => state.Email);
-    var d = new Date();
+    //var d = new Date();
     var [name, setName] = React.useState(useSelector((state) => state.name));
     var [contact, setContact] = React.useState(useSelector(state => state.mobile));
     var [password, setPassword] = React.useState(useSelector(state => state.password));
@@ -31,7 +30,7 @@ function EditProfile(props){
             e.preventDefault();
             props.props();
           }}>
-            <MdCancel size={30}/>
+            <MdCancel size={30} color="#F21B3F"/>
           </button>
           <div className="addTask">
           <span><h2>Edit Profile</h2></span>

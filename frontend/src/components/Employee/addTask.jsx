@@ -18,16 +18,13 @@ function AddTaskButton(props){
         e.preventDefault();
         props.props();
         var data = {email,type, description, startTime, duration};
-        // console.log(data);
         var response = await axios.post("addTask", data);
-        // console.log(response);
-        if(response.data == "task saved succesfully"){
+        if(response.data === "task saved succesfully"){
             alert("taks saved succesfully");
         }
     }
 
     const handleType = (newType) => {
-        // console.log(newType);
         setType(newType);
     }
 
@@ -39,7 +36,7 @@ function AddTaskButton(props){
                 e.preventDefault();
                 props.props();
             }}>
-                <MdCancel size={30}/>
+                <MdCancel size={30} color="#F21B3F"/>
             </button>
             <div className="addTask">
                 <span><h2>Add New Task</h2></span>

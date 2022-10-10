@@ -23,9 +23,7 @@ function AllTasks(props){
     // console.log(today)
     // console.log(data.length)
     for(var i=0;i<data.length;i++){
-        // console.log(data[i].start.slice(0, 10))
         if(today === data[i].start.slice(0, 10)){
-            // console.log("pushing")
             newArr.push(data[i])
         }
     }
