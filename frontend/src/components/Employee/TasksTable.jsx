@@ -6,7 +6,7 @@ import "./index.scss";
 function AllTasks(props){
 
     var data = props.props;
-    console.log(data);
+    // console.log(data);
 
     const [tasks, setTasks] = useState(data);
     const newArr = []
@@ -16,13 +16,13 @@ function AllTasks(props){
     var yyyy = today.getFullYear();
 
     today = yyyy + '-' + mm + '-' + dd;
-    console.log("in table")
-    console.log(today)
-    console.log(data.length)
+    // console.log("in table")
+    // console.log(today)
+    // console.log(data.length)
     for(var i=0;i<data.length;i++){
-        console.log(data[i].start.slice(0, 10))
+        // console.log(data[i].start.slice(0, 10))
         if(today == data[i].start.slice(0, 10)){
-            console.log("pushing")
+            // console.log("pushing")
             newArr.push(data[i])
         }
     }

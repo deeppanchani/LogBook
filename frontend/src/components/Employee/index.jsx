@@ -1,6 +1,6 @@
 import React from "react";
-import "./index.scss"
-import {useSelector} from "react-redux"
+import "./index.scss";
+import { useSelector } from "react-redux";
 import AddTaskButton from "./addTask";
 import axios from "axios";
 import AllTasks from "./TasksTable";
@@ -8,37 +8,44 @@ import EditProfile from "./editProfile";
 import WeeklyEmployeeBar from "./weeklyEmployeeBar";
 import PieChart from "./PieChart";
 
-import TodayEmployee from "./todayEmployee"; 
+import TodayEmployee from "./todayEmployee";
 
-function EmployeeDashboard(){
-    var [addTaskShow, setAddTask] = React.useState(false);
-    var [editProfileShow, setEditProfile] = React.useState(false);
-    var isLoggedIn = useSelector((state) => state.isLoggedIn);
-    var email = useSelector((state) => state.Email);
-    var [allTasks, setAllTasks] = React.useState([]);
+function EmployeeDashboard() {
+  var rightNow = new Date();
+  var [addTaskShow, setAddTask] = React.useState(false);
+  var [editProfileShow, setEditProfile] = React.useState(false);
+  var isLoggedIn = useSelector((state) => state.isLoggedIn);
+  var email = useSelector((state) => state.Email);
+  var [allTasks, setAllTasks] = React.useState([]);
 
-    React.useEffect(() => {
-        getAllTasks();
-    }, [])
+  var[dateRequired, setDateRequired] = React.useState()
 
-    const getAllTasks =  async () => {
-        var data = {email};
-        var response = await axios.post("/getTasksForEmployee", data)
+  React.useEffect(() => {
+    getAllTasks();
+  }, []);
 
+  const getAllTasks = async () => {
+    var data = { email };
+    var response = await axios.post("/getTasksForEmployee", data);
 
-        // console.log(response);
-        setAllTasks(response.data);
-    }
+    // console.log(response);
+    setAllTasks(response.data);
+  };
 
-    function handleEdit(){
-        setEditProfile(false);
-        setAddTask(!addTaskShow);
-    }
+  function handleEdit() {
+    setEditProfile(false);
+    setAddTask(!addTaskShow);
+  }
 
-    function handlePress() {
-      setAddTask(false);
-      setEditProfile(!editProfileShow);
-    }
+  function handlePress() {
+    setAddTask(false);
+    setEditProfile(!editProfileShow);
+  }
+
+  React.useEffect(() => {
+    // console.log(rightNow);
+    console.log("Date required is " + dateRequired);
+  }, [dateRequired]);
 
     if(isLoggedIn == false){
         return (
@@ -47,6 +54,8 @@ function EmployeeDashboard(){
             </div>
         )
     }
+
+
     else return (
         <main>
             <div className="employee-dashboard">
@@ -77,12 +86,17 @@ function EmployeeDashboard(){
                 <div className="weekly-graph">
                     <div className="h3"><h3>Weekly Stats</h3></div>
                     <div className="border">
-                        <WeeklyEmployeeBar props={allTasks} />
+                        <WeeklyEmployeeBar props = {allTasks}/>
                     </div>
                 </div>
                 <div className="select-graph">
                 <div className="h3"><h3>Day-wise Stats</h3></div>
+
                     <div style={{"width":"500px"}} className="border">
+                        <form >
+                            <input type="date" value = {dateRequired}
+                            onChange = {(e) => setDateRequired(e.target.value)}/>
+                        </form>
                         <div style={{"width":"500px","margin":"auto"}}><TodayEmployee props={allTasks} /></div>
                     </div>
                 </div>

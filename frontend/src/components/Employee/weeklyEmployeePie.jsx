@@ -15,13 +15,13 @@ function WeeklyEmployeePie(props){
 
         today = yyyy + "-" + mm + "-" + dd;
 
-        console.log(today);
+        // console.log(today);
 
         // console.log("today is " + today);
         for (var i = 0; i < data.length; i++) {
-            console.log("we in here ");
+            // console.log("we in here ");
             var current = data[i];
-            console.log(current);
+            // console.log(current);
             var dateloc = current.start.toString();
             dateloc = dateloc.slice(0, 10);
             // console.log("first is " + dateloc)
@@ -33,12 +33,12 @@ function WeeklyEmployeePie(props){
                 } else {
                 recess += current.duration;
                 }
-                console.log("we in equal");
+                // console.log("we in equal");
             }
             // console.log(typeof dateloc)
             // if(dateloc ==)
             // if()
-            console.log(current);
+            // console.log(current);
         }
     }
 
