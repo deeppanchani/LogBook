@@ -16,13 +16,13 @@ console.log("props in date employee is ")
 
   today = yyyy + "-" + mm + "-" + dd;
 
-  console.log(today);
+  // console.log(today);
 
   // console.log("today is " + today);
   for (var i = 0; i < data.length - 1; i++) {
-    console.log("we in here ");
+    // console.log("we in here ");
     var current = data[i];
-    console.log(current);
+    // console.log(current);
     var dateloc = current.start.toString();
     dateloc = dateloc.slice(0, 10);
     // console.log("first is " + dateloc)
@@ -34,7 +34,7 @@ console.log("props in date employee is ")
       } else {
         recess += current.duration;
       }
-      console.log("we in equal");
+      // console.log("we in equal");
     }
     // console.log(typeof dateloc)
     // if(dateloc ==)

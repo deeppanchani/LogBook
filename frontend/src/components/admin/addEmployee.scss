@@ -1,12 +1,18 @@
 $secondaryBlue : #0361FF;
 $white : #FDFCFF;
 .addTask{
-    margin: auto;
+    height: 100vh;
+    width: 100vw;
+
+    position: absolute;
+    opacity: 0.9;
+    background-color: #D8D8D8;
+    top: 0px;
     padding: 30px;
     border: 1px solid #1B1C21;
     border-radius: 20px;
     overflow: hidden;
-    width: 600px;
+    // width: 600px;
     span{
         display: flex;
         justify-content: space-around;

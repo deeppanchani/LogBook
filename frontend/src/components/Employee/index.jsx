@@ -11,11 +11,14 @@ import PieChart from "./PieChart";
 import TodayEmployee from "./todayEmployee";
 
 function EmployeeDashboard() {
+  var rightNow = new Date();
   var [addTaskShow, setAddTask] = React.useState(false);
   var [editProfileShow, setEditProfile] = React.useState(false);
   var isLoggedIn = useSelector((state) => state.isLoggedIn);
   var email = useSelector((state) => state.Email);
   var [allTasks, setAllTasks] = React.useState([]);
+
+  var[dateRequired, setDateRequired] = React.useState()
 
   React.useEffect(() => {
     getAllTasks();
@@ -39,6 +42,11 @@ function EmployeeDashboard() {
     setEditProfile(!editProfileShow);
   }
 
+  React.useEffect(() => {
+    // console.log(rightNow);
+    console.log("Date required is " + dateRequired);
+  }, [dateRequired]);
+
     if(isLoggedIn == false){
         return (
             <div>
@@ -46,6 +54,8 @@ function EmployeeDashboard() {
             </div>
         )
     }
+
+
     else return (
         <main>
             <div className="employee-dashboard">
@@ -76,12 +86,17 @@ function EmployeeDashboard() {
                 <div className="weekly-graph">
                     <div className="h3"><h3>Weekly Stats</h3></div>
                     <div className="border">
-                        {/* <weekly props = {allTasks}/> */}
+                        <WeeklyEmployeeBar props = {allTasks}/>
                     </div>
                 </div>
                 <div className="select-graph">
                 <div className="h3"><h3>Day-wise Stats</h3></div>
+
                     <div style={{"width":"500px"}} className="border">
+                        <form >
+                            <input type="date" value = {dateRequired}
+                            onChange = {(e) => setDateRequired(e.target.value)}/>
+                        </form>
                         <div style={{"width":"500px","margin":"auto"}}><TodayEmployee props={allTasks} /></div>
                     </div>
                 </div>
