@@ -1,0 +1,19 @@
+$secondaryBlue : #0361FF;
+$white : #FDFCFF;
+
+.modal{
+    top: 0px;
+    width: 100vW;
+    position: absolute;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    background-color: rgba(27, 28, 33, 0.3);  
+    backdrop-filter: blur(5px);
+    .bg{
+        background-color: $white;
+        padding: 30px;
+        border: 1px solid #1B1C21;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+}

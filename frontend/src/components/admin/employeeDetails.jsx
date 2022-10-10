@@ -28,7 +28,6 @@ function Details(props){
                 onChange = {(e) => setDateRequired(e.target.value)}/>
             </form>
            <AllTasks props = {allTasks} dateFor = {dateRequired}/>
-
         </div>
     )
 }
