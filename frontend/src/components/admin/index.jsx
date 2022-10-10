@@ -40,11 +40,26 @@ function AdminDashBoard(){
       <div className="admin">
         <div className="top-part">
           <h3>All Employees</h3>
-          <button  onClick = {handleAddEmployee} className="button">+ Add Employee</button>
+          <button onClick={handleAddEmployee} className="button">
+            + Add Employee
+          </button>
         </div>
-       {dataSet && <ShowAllData setEmployeeIdSelected = {setEmployeeIdSelected}  setEmployeeDateShown = {setEmployeeDateShown} props = {allData}/>}
-        {isAddEmployeeShow && <AddEmployee setIsAddEmployeeShown = {setIsEmployee}/>}
-       {isEmployeeDataShown && <Details email = {EmployeeIdSelected}/>}
+        {dataSet && (
+          <ShowAllData
+            setEmployeeIdSelected={setEmployeeIdSelected}
+            setEmployeeDateShown={setEmployeeDateShown}
+            props={allData}
+          />
+        )}
+        {isAddEmployeeShow && (
+          <AddEmployee setIsAddEmployeeShown={setIsEmployee} />
+        )}
+        {isEmployeeDataShown && (
+          <Details
+            email={EmployeeIdSelected}
+            setEmployeeDateShown={setEmployeeDateShown}
+          />
+        )}
       </div>
     );
 };
