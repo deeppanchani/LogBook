@@ -39,13 +39,13 @@ function EmployeeDashboard() {
 
   function handlePress() {
     setAddTask(false);
-    setEditProfile(!editProfileShow);
+    setEditProfile(true);
   }
 
   React.useEffect(() => {
     // console.log(rightNow);
-    console.log("changing date required to  " + dateRequired);
-     console.log(typeof dateRequired);
+    // console.log("changing date required to  " + dateRequired);
+    //  console.log(typeof dateRequired);
   }, [dateRequired]);
 
     if(isLoggedIn == false){
@@ -65,7 +65,9 @@ function EmployeeDashboard() {
                         <h3>Today’s Tasks</h3>
                     </div>
                     <div className="edit">
-                        <button className="edit-button button" onClick={handlePress}>
+                        <button className="edit-button button" onClick={(e) => {
+                           setEditProfile(true);
+                        }}>
                         Edit Profile
                         </button>
                     </div>
@@ -105,8 +107,8 @@ function EmployeeDashboard() {
                 </div>
                 </div>
             </div>
-            {editProfileShow && <EditProfile props = {handlePress}/>}
-            {addTaskShow && <AddTaskButton props = {handleEdit}/>}
+            {editProfileShow && <EditProfile  props = {setEditProfile}/>}
+            {addTaskShow && <AddTaskButton props = {setAddTask}/>}
         </main>
       );
   }

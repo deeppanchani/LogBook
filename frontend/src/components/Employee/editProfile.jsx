@@ -6,7 +6,8 @@ import "./addTask.scss";
 import {useSelector} from "react-redux"
 
 function EditProfile(props){
-      
+    console.log("we in edit profile");
+
     var email = useSelector((state) => state.Email);
     var d = new Date();
     var [name, setName] = React.useState(useSelector((state) => state.name));
@@ -15,18 +16,23 @@ function EditProfile(props){
 
     const  updateData = async (e) => {
       e.preventDefault();
-      props.props();
       var data  = {email, name, contact, password};
-      console.log("we here ");
-      console.log(data);
       var response = await axios.post("/updateEmployee", data);
-      console.log(response);
-
+      props.props();
+      
     }
     
+
+
     return(
       <div className="modal">
-          <button className="cancel"><MdCancel size={30}/></button>
+          <button className="cancel" 
+          onClick={(e) => {
+            e.preventDefault();
+            props.props();
+          }}>
+            <MdCancel size={30}/>
+          </button>
           <div className="addTask">
           <span><h2>Edit Profile</h2></span>
           <form action="" className="button">

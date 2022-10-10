@@ -35,7 +35,12 @@ function AddTaskButton(props){
 
     return (
         <div className="modal">
-            <button className="cancel"><MdCancel size={30}/></button>
+            <button className="cancel" onClick = {(e) => {
+                e.preventDefault();
+                props.props();
+            }}>
+                <MdCancel size={30}/>
+            </button>
             <div className="addTask">
                 <span><h2>Add New Task</h2></span>
                 <form className="button">
