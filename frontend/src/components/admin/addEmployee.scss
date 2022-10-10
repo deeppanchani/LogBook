@@ -2,20 +2,26 @@ $secondaryBlue : #0361FF;
 $white : #FDFCFF;
 
 
-.modal{
+.modalss{
     top: 0px;
     width: 100vW;
     position: absolute;
+    padding: 0;
     padding-top: 80px;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
     background-color: rgba(27, 28, 33, 0.3);  
     backdrop-filter: blur(5px);
+
+    // top: 70px;
+    // width: 100vw;
+    // position: absolute;
+    // background-color: #FDFCFF;
+    // padding: 0;
     .cancel{
         background: transparent;
         border: 0px;
         position: absolute;
         left: 300px;
-        
     }
 
     .addTask{

@@ -3,7 +3,6 @@ import axios from "axios";
 import { MdCancel } from "react-icons/md";
 
 import "./addEmployee.scss";
-import "../Employee/addTask.scss";
 
 function AddEmployee(props) {
   var d = new Date();
@@ -28,7 +27,7 @@ function AddEmployee(props) {
   };
 
   return (
-    <div className="modal">
+    <div className="modalss">
       <button
         className="cancel"
         onClick={(e) => {

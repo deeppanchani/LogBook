@@ -1,19 +1,53 @@
 $secondaryBlue : #0361FF;
 $white : #FDFCFF;
 
-.modal{
-    top: 0px;
-    width: 100vW;
+.border{
+    border: 2px solid #AEAEAE;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    // box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.modals{
+    top: 70px;
+    width: 100vw;
     position: absolute;
-    padding-top: 80px;
-    padding-bottom: 100px;
-    background-color: rgba(27, 28, 33, 0.3);  
-    backdrop-filter: blur(5px);
-    .bg{
-        background-color: $white;
-        padding: 30px;
-        border: 1px solid #1B1C21;
-        border-radius: 20px;
-        overflow: hidden;
+    background-color: #FDFCFF;
+    padding: 0;
+    .dropdown{
+        margin-left: 100px;
+        background: transparent;
+        border: 0px;
+    }
+    .employee-data{
+        display: flex;
+        flex-direction: column;
+        margin: 20px 100px;
+        .employee-task{
+            display: grid;
+            grid-template-areas:  'h3 forms''alltask dategraph'; 
+            grid-auto-rows: min-content;
+            row-gap: 40px;
+            column-gap: 20px;
+            margin-bottom: 50px;
+            .h3{
+
+            }
+            .forms{
+
+            }
+            .alltask{
+
+            }
+            .dategraph{
+
+            }
+        }
+        .weekly{
+            margin-top: 50px;
+            width: 1200px;
+            margin-bottom: 100px;
+        }
     }
 }
