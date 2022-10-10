@@ -9,7 +9,6 @@ import WeeklyEmployeeBar from "../Employee/weeklyEmployeeBar";
 
 function Details(props) {
   var today = new Date();
-
   var [dateRequired, setDateRequired] = React.useState(today);
 
   // var email = props.email;
@@ -26,7 +25,12 @@ function Details(props) {
 
   return (
     <main className="modals">
-      <button className="dropdown"><MdArrowDropDownCircle size={40} color={"#0361FF"}/></button>
+      <button className="dropdown" onClick = {(event) => {
+        event.preventDefault();
+        props.setEmployeeDateShown(false);
+      }}>
+        <MdArrowDropDownCircle size={40} color={"#0361FF"}/>
+      </button>
       <div className="employee-data">
         <div className="employee-task">
           <div className="h3">
