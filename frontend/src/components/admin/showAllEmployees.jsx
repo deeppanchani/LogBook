@@ -42,7 +42,7 @@ function ShowAllData(props) {
                     props.setEmployeeIdSelected(employee.email);
                     // data = props.props;
                   }}
-                >{employee.name}
+                ><u>{employee.name}</u>
                 </button>
               </td>
 

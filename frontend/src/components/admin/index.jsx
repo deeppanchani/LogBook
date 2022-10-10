@@ -2,7 +2,7 @@ import React from "react";
 import "./index.scss";
 import AddEmployee from "./addEmployee";
 import ShowAllData from "./showAllEmployees";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import Details from "./employeeDetails";
 import axios from "axios";
 

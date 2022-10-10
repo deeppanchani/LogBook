@@ -21,7 +21,7 @@ function Details(props) {
 
   React.useEffect(() => {
     getAllTasks();
-  }, []);
+  },);
 
   return (
     <main className="modals">
