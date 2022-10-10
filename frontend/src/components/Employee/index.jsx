@@ -102,7 +102,7 @@ function EmployeeDashboard() {
                 </div>
             </div>
             {editProfileShow && <EditProfile  props = {setEditProfile}/>}
-            {addTaskShow && <AddTaskButton props = {setAddTask}/>}
+            {addTaskShow && <AddTaskButton props = {setAddTask} refreshTasks = {getAllTasks}/>}
         </main>
       );
   }
