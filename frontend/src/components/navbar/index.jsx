@@ -33,7 +33,7 @@ function Navbar(){
           </div>
         </div>
         <div className="display-mode">
-          <MdDarkMode className="mode-button" size={35.75}></MdDarkMode>
+          {/* <MdDarkMode className="mode-button" size={35.75}></MdDarkMode> */}
           <button onClick={handleLogClick} className="LogButton button">{isLoggedIn ? "LogOut" : "LogIn"}</button>
         </div>
       </nav>
