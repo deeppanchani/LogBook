@@ -11,7 +11,7 @@ function ShowAllData(props) {
   var [deleteShow, setDeleteShow] = React.useState(false);
   var [idSelected, setIdSelected] = React.useState("");
 
-  const [employees, setEmployees] = useState(data);
+  // const [employees, setEmployees] = useState(data);
   var toPass = {
     idSelected,
     setDeleteShow,
@@ -31,7 +31,7 @@ function ShowAllData(props) {
           </tr>
         </thead>
         <tbody>
-          {employees.map((employee) => (
+          {data.map((employee) => (
             <tr className="b2" key={employee._id}>
               <td>
                 <button
@@ -40,6 +40,7 @@ function ShowAllData(props) {
                     e.preventDefault();
                     props.setEmployeeDateShown(true);
                     props.setEmployeeIdSelected(employee.email);
+                    // data = props.props;
                   }}
                 >{employee.name}
                 </button>
