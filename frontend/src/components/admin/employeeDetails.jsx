@@ -2,6 +2,8 @@ import React from "react";
 import axios from "axios";
 
 import AllTasks from "../Employee/TasksTable";
+import TodayEmployee from "../Employee/todayEmployee";
+
 
 function Details(props){
     var today = new Date();
@@ -28,6 +30,7 @@ function Details(props){
                 onChange = {(e) => setDateRequired(e.target.value)}/>
             </form>
            <AllTasks props = {allTasks} dateFor = {dateRequired}/>
+           <TodayEmployee props = {allTasks} forDate = {dateRequired} />
 
         </div>
     )
